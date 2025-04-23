@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,29 +17,39 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         .content-container {
             padding: 80px 0;
         }
+
         .content-wrapper {
             max-width: 800px;
             margin: 0 auto;
         }
+
         h1 {
             color: var(--primary-color);
             margin-bottom: 30px;
         }
+
         h2 {
             color: var(--primary-color);
             margin: 30px 0 15px;
         }
-        p, ul, ol {
+
+        p,
+        ul,
+        ol {
             margin-bottom: 20px;
         }
-        ul, ol {
+
+        ul,
+        ol {
             padding-left: 20px;
         }
+
         .last-updated {
             font-style: italic;
             color: var(--dark-gray);
@@ -46,6 +57,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav class="container">
@@ -65,23 +77,33 @@
     <main class="content-container">
         <div class="container content-wrapper">
             <h1>Privacy Policy</h1>
-            <p class="last-updated">Last Updated: March 1, 2025</p>
+            <p class="last-updated">Last Updated: April 23, 2025</p>
 
-            <p>At Beavers Money, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our service. Please read this Privacy Policy carefully. By using Beavers Money, you consent to the data practices described in this statement.</p>
+            <p>At Beavers Money ("we", "our", "us"), we are committed to protecting your privacy and keeping your data
+                secure. This Privacy Policy explains what information we collect, how we use it, the limited
+                circumstances in which we may disclose it, and the choices you have. By using Beavers Money, you agree
+                to the practices described below. </p>
 
             <h2>1. Information We Collect</h2>
-            
+
             <h3>1.1 Gmail™ Data</h3>
-            <p>Our service requires access to your Gmail™ messages to identify and extract financial information from receipts and invoices. This access is read-only and limited to the purpose of providing our service.</p>
-            
+            <p>Our service requires access to your Gmail™ messages to identify and extract financial information from
+                receipts and invoices. This access is read-only and limited to the purpose of providing our service.</p>
+
             <h3>1.2 Google Sheets™ Access</h3>
-            <p>We require permission to access and modify the specific Google Sheet™(s) that you designate for storing your financial data extracted from emails.</p>
-            
+            <p>We require permission to access and modify the specific Google Sheet™(s) that you designate for storing
+                your financial data extracted from emails.</p>
+
             <h3>1.3 Usage Data</h3>
-            <p>We collect information on how you interact with our service, including access times, pages viewed, and the features you use. This helps us improve our service and troubleshoot issues.</p>
+            <p>We collect information on how you interact with our service, including access times, pages viewed, and
+                the features you use. This helps us improve our service and troubleshoot issues.</p>
+
+            <h3>1.4 Basic Google Profile Information</h3>
+            <p>Your Google account ID and primary email address, used solely for licensing, providing support, and
+                sending service‑related notices.</p>
 
             <h2>2. How We Use Your Information</h2>
-            
+
             <p>We use the information we collect for various purposes, including:</p>
             <ul>
                 <li>To provide and maintain our service</li>
@@ -92,19 +114,81 @@
                 <li>To gather analysis or valuable information to improve our service</li>
                 <li>To detect, prevent, and address technical issues</li>
             </ul>
+            <p>We never sell or lease your information for advertising, market‑research, or profiling purposes.</p>
 
-            <h2>3. Data Storage</h2>
-            
-            <h3>3.1 Your Financial Data</h3>
-            <p><strong>Your financial data extracted from emails is stored exclusively in your own Google Sheets™. We do not store copies of this data on our servers.</strong> The processing of your email content to extract financial information happens temporarily during the extraction process, and we do not retain copies of your emails or their content.</p>
-            
-            <h2>4. Changes to This Privacy Policy</h2>
-            
-            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes.</p>
+            <h2>3. Where Your Data Is Stored & Processed</h2>
 
-            <h2>5. Contact Us</h2>
-            
-            <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:privacy@beavers.money">privacy@beavers.money</a>.</p>
+            <ul>
+                <li>All transactional data lives exclusively in your own Google Sheet.</li>
+                <li>Email message content is processed in transit and discarded immediately after the required fields
+                    are extracted.</li>
+                <li>No copy of your email content or extracted data is stored on our servers or transferred to any
+                    third‑party infrastructure.</li>
+            </ul>
+
+            <h2>4. Data Retention & Deletion</h2>
+            <p>Because we do not persist the contents of your emails or extracted rows on our servers, we retain only
+                minimal account metadata (your Google UID and license status). If you uninstall the add‑on or email us
+                at <a href="mailto:support@beavers.money">support@beavers.money</a>, we will delete this metadata within
+                5 business days.</p>
+
+            <h2>5. Revoking Permissions</h2>
+            <p>You are always in control of the OAuth scopes you grant. To review or remove Beavers Money's access:</p>
+
+            <ol>
+                <li>Visit Google Account > Security > Third‑party apps with account access.</li>
+                <li>Select Beavers Money and click Remove access.</li>
+            </ol>
+
+            <p>Removing access immediately stops all data processing.</p>
+
+            <h2>6. Generative AI & Third‑Party APIs</h2>
+
+            <p>If you opt‑in to enrich your transactions with AI summaries, the selected rows of data are sent as input
+                prompts to Gemini API. We do not store this data. Your use of Gemini is subject to Gemini API <a
+                    href="https://ai.google.dev/gemini-api/terms">Terms of Service</a> and <a
+                    href="https://ai.google.dev/gemini-api/terms">Privacy Policy</a>.</p>
+
+            <p>We never use your Gmail content as training data for AI models, and we do not retain AI prompts or
+                responses once written to your sheet.</p>
+
+            <h2>7. Payments</h2>
+
+            <p>Beavers Money currently offers a free tier. If you choose a paid plan, payment processing is handled by
+                other third parties payment processor, such as Stripe and PayPal to bill you for services. We do not
+                store, log, or have access to your full credit‑card details.</p>
+
+            <h2>8. Security</h2>
+
+            <ul>
+                <li>OAuth 2.0 is used for authentication, so you never share your Google credentials with us.</li>
+                <li>All network traffic is encrypted via HTTPS.</li>
+                <li>Access to production infrastructure is protected by multi‑factor authentication and least‑privilege
+                    access controls.</li>
+            </ul>
+            <p>We follow Google's recommended best practices and periodically review our security posture.</p>
+
+            <h2>9. Changes to This Privacy Policy</h2>
+
+            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new
+                Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy
+                Policy periodically for any changes.</p>
+
+            <h2>10. Contact Us</h2>
+
+            <p>If you have any questions about this Privacy Policy, please contact us at <a
+                    href="mailto:support@beavers.money">support@beavers.money</a>.</p>
+
+            <h2></h2>
+            <p>Our use and transfer of information received from Google APIs adheres to the <a
+                    href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes">Google
+                    API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+            <p>Your use of this add-on is subject to the <a href="https://developers.google.com/terms">Google APIs Terms
+                    of Service</a> and the <a href="https://ai.google.dev/terms">Generative AI APIs Additional Terms of
+                    Service</a>.
+
+            </p>
         </div>
     </main>
 
@@ -136,4 +220,5 @@
         </div>
     </footer>
 </body>
-</html> 
+
+</html>
