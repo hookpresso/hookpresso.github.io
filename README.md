@@ -26,7 +26,7 @@ To run the website locally, simply open any of the HTML files in a web browser, 
 
 ## Assets
 
-- `logo.png`: The Beavers Money logo
+- `/public/logo.svg`: The Beavers Money logo
 - `css/styles.css`: Main stylesheet
 - `js/script.js`: JavaScript functionality
 
