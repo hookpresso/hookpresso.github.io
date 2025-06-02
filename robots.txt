@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /thanks/
+Disallow: /support-thanks/
+Disallow: *.html
+
+
+Sitemap: https://beavers.money/sitemap.xml
