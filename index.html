@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,204 +11,133 @@
     <link rel="manifest" href="/favicon/site.webmanifest">
     <link rel="shortcut icon" href="/favicon/favicon.ico">
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://beavers.money/">
+    <link rel="canonical" href="https://hookpresso.github.io/">
     <!-- Stylesheet links -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <header>
         <nav class="container">
             <div class="logo">
-                <img src="/public/logo.svg" alt="Beavers Money Logo">
+                <img src="logo.png" alt="Beavers Money Logo">
+                <span>Beavers Money</span>
             </div>
             <ul class="nav-links">
-                <li><a href="#" class="btn-primary">Reserve my spot</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/support.html">Support</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>All your finances in one
-                        <div class="google-sheets-logo-container">
-                            <img src="/public/google-sheets-logo.svg" alt="Google Sheets™">
-                        </div>
-                        , auto‑updated each day
-                    </h1>
-                    <p class="tagline">Money Beavers turns every confirmation e‑mail into clean transaction rows while you
-                        sleep. Early‑bird $7 / month after free beta.</p>
-                    <a href="#" class="btn-primary">Reserve my spot</a>
+        <section class="hero container">
+            <div class="hero-content">
+                <h1>Transform Your Inbox Into Financial Insights</h1>
+                <p class="tagline">Effortlessly organize your finances with AI that works while you sleep.</p>
+                <!-- <a href="#" class="btn-primary">Try Beavers Money</a> -->
+            </div>
+            <div class="hero-image">
+                <img src="public/hero-image.png" alt="Beavers Money Dashboard" class="placeholder-img">
+            </div>
+        </section>
+
+        <section class="features container">
+            <h2>Let Your Inbox Tell Your Spending Story</h2>
+            <p class="section-desc">Beavers Money connects with your Gmail™ account to automatically extract transaction data from receipts and invoices, organizing everything neatly in your Google Sheets™.</p>
+            
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <div class="icon">📧</div>
+                    <h3>Email Collection</h3>
+                    <p>Automatically scans your inbox for receipts and invoice emails</p>
                 </div>
-                <div class="hero-image">
-                    <img src="public/hero-image.png" alt="Beavers Money Dashboard" class="hero-image">
+                <div class="feature-card">
+                    <div class="icon">🤖</div>
+                    <h3>AI Processing</h3>
+                    <p>Extracts key transaction details using advanced AI technology</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📊</div>
+                    <h3>Google Sheets™ Integration</h3>
+                    <p>Organizes all your financial data directly in your own spreadsheet</p>
                 </div>
             </div>
         </section>
 
-        <section class="features">
-            <div class="container">
-                <div class="feature-cards">
-                    <div class="feature-card">
-                        <div class="">
-                            <img src="public/hero-image.png" alt="Beavers Money Dashboard" class="hero-image">
-                        </div>
-                        <div class="feature-card-content">
-                            <h3>Effortless Expense Tracking, Smarter Wealth‑Building</h3>
-                            <p>Money Beavers' AI sweeps your inbox, extracts every transaction, and auto‑categorizes
-                                spending—so you can focus on growing your net worth.</p>
-
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="">
-                            <img src="public/hero-image.png" alt="Beavers Money Dashboard" class="hero-image">
-                        </div>
-                        <div class="feature-card-content">
-                            <h3>Live Financial Snapshot in Google Sheets</h3>
-                            <p>All transactions sync to a familiar spreadsheet, giving you real‑time filters, edits, and
-                                pivot‑table power without extra apps.</p>
-                            <a href="#" class="btn-primary">Reserve my spot</a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="">
-                            <img src="public/hero-image.png" alt="Beavers Money Dashboard" class="hero-image">
-                        </div>
-                        <div class="feature-card-content">
-
-                            <h3>Uncover & Eliminate Sneaky Recurring Costs</h3>
-                            <p>We flag subscriptions and repeat charges the moment they post, helping you cut waste before
-                                it
-                                drains your budget.</p>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="">
-                            <img src="public/hero-image.png" alt="Beavers Money Dashboard" class="hero-image">
-                        </div>
-                        <div class="feature-card-content">
-                            <h3>Total Flexibility, Your Rules</h3>
-                            <p>Rename categories, tweak formulas, add custom dashboards—every column, sheet, and alert
-                                adapts to
-                                the way you manage money.</p>
-                            <a href="#" class="btn-primary">Reserve my spot</a>
-                        </div>
-                    </div>
+        <section class="how-it-works container">
+            <h2>From Email to Transactions in Three Simple Steps</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Connect Your Gmail™</h3>
+                    <p>Grant secure, read-only access to your Gmail™ account</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Set Up Your Google Sheet™</h3>
+                    <p>Create or connect to your personal finance spreadsheet</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Let AI Do the Work</h3>
+                    <p>Watch as transactions automatically populate your spreadsheet</p>
                 </div>
             </div>
         </section>
 
-        <section class="social-proof">
-            <div class="container">
-                <h2>Money Beavers is Trusted and Recommended</h2>
-                <div class="steps">
-                    <div class="review">
-                        <p class="review-text">"Money Beavers is exactly what I needed to keep our family budget on track.
-                            The add‑on sweeps our Gmail, drops every receipt into Google Sheets, and the built‑in categories
-                            make weekly check‑ins painless."</p>
-                        <p class="reviewer">Linh Tran</p>
-                        <div class="review-info">
-                            <p class="review-title">Gmail Add‑on Review</p>
-                            <p class="review-date">April 28, 2025</p>
-                        </div>
+        <section class="faq container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Where is my data stored?</button>
+                    <div class="accordion-content">
+                        <p>Your data is stored exclusively in your own Google Sheets™. We don't keep copies of your financial information on our servers. Beavers Money simply processes the data and sends it directly to your spreadsheet.</p>
                     </div>
-                    <div class="review">
-                        <p class="review-text">"I clung to Mint for years, but moving to Money Beavers was a breeze. My custom Excel budget took two hours to port, and now daily email digests keep everything in sync automatically—no bank logins required."</p>
-                        <p class="reviewer">Marcus Nguyen</p>
-                        <div class="review-info">
-                            <p class="review-title">Gmail Add‑on Review</p>
-                            <p class="review-date">April 24, 2025</p>
-                        </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Is my email data shared with the developers?</button>
+                    <div class="accordion-content">
+                        <p>No. Beavers Money operates with limited, read-only access to your Gmail™, and we don't store or share any of your email content. The AI processing happens securely, and only the extracted transaction data is placed in your Google Sheet™.</p>
                     </div>
-                    <div class="review">
-                        <p class="review-text">"Money Beavers gives me clarity in two ways: first, it pulls receipts from six different inboxes into one live sheet; second, the community templates let me slice spending any way I like. Way more control than other trackers."</p>
-                        <p class="reviewer">Quang Hoang</p>
-                        <div class="review-info">
-                            <p class="review-title">Gmail Add‑on Review</p>
-                            <p class="review-date">April 15, 2025</p>
-                        </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">How accurate is the AI extraction?</button>
+                    <div class="accordion-content">
+                        <p>Our AI model has been trained on thousands of common receipt and invoice formats. While accuracy is generally high (above 95% for most standard formats), you can always review and edit the extracted data in your spreadsheet.</p>
                     </div>
-                    <div class="review">
-                        <p class="review-text">"The auto‑tagging is scarily accurate. Monthly and annual summaries update themselves, so I ditched my manual Sheets workflow. If you love spreadsheets but hate copy‑paste drudgery, this is it."</p>
-                        <p class="reviewer">Diem Pham</p>
-                        <div class="review-info">
-                            <p class="review-title">Gmail Add‑on Review</p>
-                            <p class="review-date">April 10, 2025</p>
-                        </div>
-                    </div>
-                    <div class="review">
-                        <p class="review-text">"After years of juggling CSV exports, Money Beavers finally makes my spreadsheet‑first habit effortless. New add‑ons keep showing up—recurring‑expense tracker, cash‑flow charts—and each one just plugs in."</p>
-                        <p class="reviewer">Huy Bui</p>
-                        <div class="review-info">
-                            <p class="review-title">Gmail Add‑on Review</p>
-                            <p class="review-date">April 5, 2025</p>
-                        </div>
-                    </div>
-                    <div class="review">
-                        <p class="review-text">"With Mint gone, I worried about losing my budgets, but Money Beavers is ten times better. Envelope budgets, net‑worth dashboards, subscription alerts—everything lives in Google Sheets, and support replies within hours."</p>
-                        <p class="reviewer">Tammy Vo</p>
-                        <div class="review-info">
-                            <p class="review-title">Gmail Add‑on Review</p>
-                            <p class="review-date">March 27, 2025</p>
-                        </div>
-                    </div>
-                    <div class="review">
-                        <p class="review-text">"As a developer, I love the power Money Beavers unlocks. Scripts, pivots, even AI formulas—now I automate the tedious bits and focus on insights. Wish I'd found it sooner."</p>
-                        <p class="reviewer">Long Pham</p>
-                        <div class="review-info">
-                            <p class="review-title">Gmail Add‑on Review</p>
-                            <p class="review-date">March 19, 2025</p>
-                        </div>
-                    </div>
-                    <div class="review">
-                        <p class="review-text">"Money Beavers finally shows where our cash really goes. Next step: proactive budgeting. The docs are clear, and the user forum is buzzing with tips. Highly recommend giving it a spin."</p>
-                        <p class="reviewer">Lan Huynh</p>
-                        <div class="review-info">
-                            <p class="review-title">Gmail Add‑on Review</p>
-                            <p class="review-date">March 15, 2025</p>
-                        </div>
-                    </div>
-                    <div class="review">
-                        <p class="review-text">"Testing Money Beavers has been eye‑opening. The transaction sheet is easier to filter than any app I've tried, and the morning email recap keeps me honest about yesterday's spending."</p>
-                        <p class="reviewer">Adam Phan</p>
-                        <div class="review-info">
-                            <p class="review-title">Gmail Add‑on Review</p>
-                            <p class="review-date">March 11, 2025</p>
-                        </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Can I customize what data gets extracted?</button>
+                    <div class="accordion-content">
+                        <p>Yes! Beavers Money comes with standard fields like date, amount, vendor, and category, but you can customize which data points are extracted and how they're organized in your spreadsheet.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-
     </main>
 
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="/public/logo.svg" alt="Beavers Money Logo" class="small-logo">
+                    <img src="logo.png" alt="Beavers Money Logo" class="small-logo">
                     <p>Beavers Money</p>
                 </div>
                 <div class="footer-links">
                     <h4>Links</h4>
                     <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../support">Support</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/support.html">Support</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="../terms">Terms of Service</a></li>
-                        <li><a href="../privacy-policy">Privacy Policy</a></li>
+                        <li><a href="pages/terms.html">Terms of Service</a></li>
+                        <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
@@ -221,5 +149,4 @@
 
     <script src="js/script.js"></script>
 </body>
-
-</html>
+</html> 
