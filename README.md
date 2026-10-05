@@ -1,0 +1,39 @@
+# hookpresso.github.io
+
+A dependency-free, multi-product legal-policy website for GitHub Pages. TrackLogs is the first product. Policy organization is inspired by the user-provided TickTick references; the text is adapted to TrackLogs rather than copied as factual promises.
+
+## Local preview
+
+Requires Python 3.10+; no packages to install.
+
+```sh
+python3 scripts/build.py
+python3 scripts/check.py
+python3 -m http.server 8088 --directory _site
+```
+
+Open http://localhost:8088. Generated files stay in ignored `_site/`.
+
+## Edit content
+
+- `site.json`: site name, legal operator, support email, effective date, product catalog.
+- `content/<product>/privacy.json` and `terms.json`: independent product policies.
+- `assets/style.css`: responsive theme, print styles, keyboard focus states.
+
+To add a product, add a unique lowercase slug to the catalog and create both policy files in its content directory. Never reuse TrackLogs disclosures without verifying the new product's behavior. Pages use relative URLs and work on a repository subpath or a custom domain. Product destinations accept HTTPS URLs only.
+
+## Publishing
+
+Complete PUBLICATION_CHECKLIST.md and set `publication_ready` to true only after resolving policy drafts. `python3 scripts/build.py --production` verifies required operator fields. This check cannot establish legal or factual accuracy.
+
+Repository: https://github.com/hookpresso/hookpresso.github.io
+
+Website: https://hookpresso.github.io/
+
+GitHub Pages uses **GitHub Actions**. The supplied workflow checks previews for pull requests and deploys the current site on main pushes or manual runs. Draft policy notices remain visible until publication review is complete; deployment does not mark policies effective. The GitHub Pages environment restricts deployment to main.
+
+Stable policy paths: `/tracklogs/privacy/` and `/tracklogs/terms/`. The generated site includes only public assets/content. Never upload the entire source repository as the Pages artifact.
+
+## Scope
+
+This project does not modify TrackLogs or update its in-app policy links. The website includes no client-side analytics or external fonts. GitHub Pages itself has hosting request processing. Review operator identity, release-build behavior, and relevant jurisdictions before publishing.

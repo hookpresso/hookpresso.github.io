@@ -1,0 +1,50 @@
+{
+  "title": "Privacy Policy",
+  "updated": "2026-10-05",
+  "sections": [
+    {
+      "title": "Your information, clearly explained",
+      "body": "TrackLogs helps you record things worth remembering. This policy explains how local records, optional backups, diagnostics, and Universal Input research are handled. TrackLogs does not require a TrackLogs account and does not provide live synchronization of records."
+    },
+    {
+      "title": "Records on your device",
+      "body": "Things, trackers, entries, preferences, and reminder settings are stored in a local database. Ordinary analytics and crash telemetry do not include user-entered names, notes, values, measurements, or record metadata. Your records may contain sensitive information depending on what you choose to track."
+    },
+    {
+      "title": "Backups and exports",
+      "body": "On supported native builds, you can choose cloud backup in your own iCloud account on iOS or Google Drive app-data storage on Android. Backup files contain your records and supported settings. This is optional backup and restore, rather than live synchronization, and is not available on web/PWA. TrackLogs adds no separate backup password or app-level encryption; provider protections apply. Signing into a backup provider does not create a TrackLogs account. You may also export records to a destination you choose, and device or OS backups may retain local app data."
+    },
+    {
+      "title": "Usage analytics and diagnostics",
+      "body": "Configured builds may use Google Firebase Analytics, Firebase Crashlytics, and Amplitude to understand feature usage and diagnose failures. This can involve app interactions, screen categories, session or installation identifiers, app/device information, and error diagnostics. These records are distinct from your tracking database. Availability depends on platform and build configuration. Amplitude uses the US region and a generated device identifier; its location/IP enrichment and advertising/platform identifiers are disabled in the documented configuration. Pseudonymous identifiers are not treated as proof that data is anonymous."
+    },
+    {
+      "title": "On-device AI and Universal Input research",
+      "body": "Supported Universal Input models process prompts on the device to help interpret your input. Separately, configured research collection may transmit bounded raw input, structured extractions, candidate suggestions, interaction outcomes, timing, and installation/session identifiers to a private Google Cloud research backend. Local model processing does not mean this separate research collection stays on the device. Research payloads are kept out of ordinary analytics and crash reports. Eligible capture depends on build configuration, platform attestation, and server policy. This draft does not promise an in-app opt-out or consent flow that has not been verified."
+    },
+    {
+      "title": "Why information is processed",
+      "body": "Information is processed to provide local tracking, deliver requested reminders and backups, maintain reliability and security, understand feature use, improve Universal Input interpretation, and respond to support requests. Applicable processing grounds and any necessary consent must be determined for the operator and release markets before publication. Merely using the app is not described as blanket consent to every data use."
+    },
+    {
+      "title": "Service providers and international processing",
+      "body": "Apple and Google handle their respective backup services. Google/Firebase and Amplitude provide configured telemetry services, and Google Cloud hosts the separate research backend in Singapore. Providers may process data outside your country. The scope of access depends on the service: a telemetry provider is not automatically given your local tracking database. Research data is restricted to authorized access. We do not include advertising SDK disclosures for services that are not part of this product."
+    },
+    {
+      "title": "Retention and deletion",
+      "body": "Local records remain until you delete them or the app/browser storage is removed. Soft-deleted records and user-controlled backups can persist; deleting a local record does not necessarily erase copies already exported or backed up. Supported cloud backup management can delete TrackLogs cloud backups while retaining local records. Research analytical storage uses occurrence-based daily partitions with a 30-day retention window; delayed delivery does not extend it. Research queues and broker stages use 24-hour limits, with suspended-device cleanup occurring on resume. Google Cloud recovery copies can persist beyond analytical expiry, including 48-hour time travel and a subsequent 7-day fail-safe. Ordinary analytics, crash-report, support, and provider-backup retention must be confirmed before this draft is published."
+    },
+    {
+      "title": "Your choices and privacy requests",
+      "body": "You can choose whether to connect optional backup, manage cloud backups through supported app controls, export your records, and manage notification permissions in device settings. Browser data clearing can remove local web records. Contact the operator to ask about remotely held data, correction, deletion, or other rights available where you live. Without accounts, identifying remote records may require a relevant installation reference; requests must avoid disclosing unrelated tracking content. Research disable and deletion controls for operators are separate from verified user-facing controls."
+    },
+    {
+      "title": "Security and storage limitations",
+      "body": "Reasonable technical and organizational safeguards are used, including restricted research access and attestation checks. No service or storage system can promise absolute security or durability. Web storage may be evicted by the browser. Keep exports or backups when records are important to you."
+    },
+    {
+      "title": "Support, children, and changes",
+      "body": "If you contact support, the operator receives your email address and the information you send. Avoid sending sensitive tracking content unless needed for your request. The intended audience, age restrictions, support retention, and applicable child-privacy procedures must be confirmed before publication. Material policy changes should be clearly announced, with an updated revision and effective date. Contact details appear below once configured."
+    }
+  ]
+}
