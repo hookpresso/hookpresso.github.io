@@ -52,6 +52,8 @@ You retain your rights to your data. Oddmatter's ownership of its software and s
 
 We do not sell your personal information. We do not share it with third parties without your permission. Where needed to operate the Services, we use service and hosting providers, including the AI providers described above. We select providers that meet applicable GDPR requirements and apply safeguards when transferring information to and from them. Provider processing is for the service purposes explained in this policy.
 
+We use service providers, including hosting and AI providers, to process information on our behalf as needed to deliver the features you use. By using the Services, you acknowledge these practices as described in this policy.
+
 Website cookies
 
 Our website uses cookies to remember preferences and support its functions. You can block or remove cookies through your browser settings. Features that depend on cookies may become unavailable or may not work correctly when you do so.
