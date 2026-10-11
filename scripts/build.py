@@ -111,12 +111,32 @@ privacy_headings = {
 }
 
 
-def privacy_inline(text):
-    # Render the supplied Markdown links while escaping all document text.
+def policy_inline(text):
+    # Link document references in one pass, preserving text and escaping HTML.
+    pattern = re.compile(
+        r'\[(?P<label>[^\]]+)\]\((?P<destination>https://[^\s)]+)\)'
+        r'|(?P<url>https?://[^\s<>"\)]+)'
+        r'|(?P<email>[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})'
+        r'|(?P<policy>Privacy Policy|Terms of Service)'
+    )
     parts, cursor = [], 0
-    for match in re.finditer(r'\[([^\]]+)\]\((https://[^\s)]+)\)', text):
+    for match in pattern.finditer(text):
         parts.append(e(text[cursor:match.start()]))
-        parts.append(f'<a href="{e(match.group(2))}">{e(match.group(1))}</a>')
+        suffix = ''
+        if match.group('destination'):
+            label, destination = match.group('label'), match.group('destination')
+        elif match.group('url'):
+            label = match.group('url').rstrip('.,;:!?')
+            suffix = match.group('url')[len(label):]
+            destination = label
+        elif match.group('email'):
+            label = match.group('email')
+            destination = 'mailto:' + label
+        else:
+            label = match.group('policy')
+            route = 'privacy' if label == 'Privacy Policy' else 'terms'
+            destination = c['url'].rstrip('/') + '/' + route + '/'
+        parts.append(f'<a href="{e(destination)}">{e(label)}</a>{e(suffix)}')
         cursor = match.end()
     parts.append(e(text[cursor:]))
     return ''.join(parts)
@@ -130,7 +150,7 @@ for line in privacy.splitlines():
         privacy_toc.append(f'<li><a href="#{anchor}">{e(line.strip())}</a></li>')
         privacy_sections.append(f'<h2 id="{anchor}">{e(line.strip())}</h2>')
     else:
-        privacy_sections.append(f'<p>{privacy_inline(line)}</p>')
+        privacy_sections.append(f'<p>{policy_inline(line)}</p>')
 privacy_date = c.get('effective_date', '')
 privacy_status = (f'<p class="meta">Effective: <time datetime="{e(privacy_date)}">{date.fromisoformat(privacy_date).strftime("%d %B %Y").lstrip("0")}</time></p>'
                   if c['publication_ready'] and privacy_date else draft_notice())
@@ -147,7 +167,7 @@ terms_toc, terms_sections = [], []
 
 
 def terms_paragraphs(text):
-    return ''.join(f'<p class="terms-paragraph">{e(block.strip())}</p>'
+    return ''.join(f'<p class="terms-paragraph">{policy_inline(block.strip())}</p>'
                    for block in re.split(r'\n[ \t]*\n', text.strip()) if block.strip())
 
 
