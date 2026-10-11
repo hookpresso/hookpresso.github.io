@@ -1,14 +1,13 @@
 {
   "name": "oddmatter.space",
   "operator": "Oddmatter",
-  "email": "",
+  "email": "ping@oddmatter.space",
   "effective_date": "",
   "publication_ready": false,
   "products": [
     {
       "slug": "tracklogs",
       "name": "TrackLogs",
-      "emoji": "\u2197",
       "tagline": "Keep track of what matters.",
       "description": "An offline-first app for recording things worth remembering. Track numbers, check-offs, and notes, with reminders and a history you can revisit.",
       "platforms": [
@@ -16,7 +15,8 @@
         "Android",
         "Web"
       ],
-      "url": ""
+      "url": "",
+      "logo": "assets/products/tracklogs.png"
     }
   ],
   "profile_url": "https://github.com/hookpresso",

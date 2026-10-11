@@ -1,6 +1,6 @@
 # oddmatter.space
 
-A dependency-free, multi-product legal-policy website for GitHub Pages. TrackLogs is the first product. Policy organization is inspired by the user-provided TickTick references; the text is adapted to TrackLogs rather than copied as factual promises.
+A dependency-free, multi-product website for GitHub Pages. TrackLogs is the first product. Policy organization is inspired by the user-provided TickTick references; the text is adapted to TrackLogs rather than copied as factual promises.
 
 ## Local preview
 
@@ -14,6 +14,15 @@ python3 -m http.server 8088 --directory _site
 
 Open http://localhost:8088. Generated files stay in ignored `_site/`.
 
+## Site map
+
+- `/`: Oddmatter introduction and product directory, with the real TrackLogs app icon.
+- `/privacy/`: Privacy Policy for all listed apps, with app-specific sections.
+- `/terms/`: Terms of Service for all listed apps, with app-specific sections.
+- `/about/`: About Us and contact at `ping@oddmatter.space`.
+
+Existing `/tracklogs/`, `/tracklogs/privacy/`, and `/tracklogs/terms/` routes remain available for bookmarks and in-app links. The build generates `sitemap.xml` for all seven routes. The shared policy pages load each product's own documents; adding an app does not copy TrackLogs disclosures into that app's policy.
+
 ## Edit content
 
 - `site.json`: site name, legal operator, support email, effective date, product catalog.
@@ -22,7 +31,7 @@ Open http://localhost:8088. Generated files stay in ignored `_site/`.
 - `assets/oddmatter-logo-pack/`: supplied brand artwork; see `assets/LOGO_USAGE.md` for layout choices.
 - `CNAME`: GitHub Pages custom domain, copied into the deployed site.
 
-To add a product, add a unique lowercase slug to the catalog and create both policy files in its content directory. Never reuse TrackLogs disclosures without verifying the new product's behavior. Pages use relative URLs and work on a repository subpath or a custom domain. Product destinations accept HTTPS URLs only.
+To add a product, add a unique lowercase slug and a local logo asset path to the catalog and create both policy files in its content directory. Never reuse TrackLogs disclosures without verifying the new product's behavior. Pages use relative URLs and work on a repository subpath or a custom domain. Product destinations accept HTTPS URLs only.
 
 ## Publishing
 
