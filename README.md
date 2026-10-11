@@ -17,23 +17,23 @@ Open http://localhost:8088. Generated files stay in ignored `_site/`.
 ## Site map
 
 - `/`: Oddmatter introduction and product directory, with the real TrackLogs app icon.
-- `/privacy/`: Privacy Policy for all listed apps, with app-specific sections.
+- `/privacy/`: site-wide Privacy Policy for Oddmatter services.
 - `/terms/`: site-wide Terms of Service for Oddmatter services.
 - `/about/`: About Us and contact at `ping@oddmatter.space`.
 
-The site has only these four pages. The build generates `sitemap.xml` for these routes and clears old generated output before rebuilding. The Privacy Policy loads each product's own disclosures. Terms of Service uses original site-wide Oddmatter wording and is effective from 11 October 2026. Its `terms_effective_date` is independent of the Privacy Policy's draft status.
+The site has only these four pages. The build generates `sitemap.xml` for these routes and clears old generated output before rebuilding. The Privacy Policy uses the supplied site-wide wording with only branding and email replacements, and retains its draft status. Terms of Service uses original site-wide Oddmatter wording and is effective from 11 October 2026. Its `terms_effective_date` is independent of the Privacy Policy's draft status.
 
 ## Edit content
 
 - `site.json`: site name, legal operator, support email, effective date, product catalog.
-- `content/<product>/privacy.json`: product privacy disclosures.
+- `content/privacy.txt`: supplied site-wide Privacy Policy text.
 - `content/terms.txt`: site-wide Terms of Service text.
 - `site.json` → `terms_effective_date`: effective date for the terms only.
 - `assets/style.css`: responsive theme, print styles, keyboard focus states.
 - `assets/oddmatter-logo-pack/`: supplied brand artwork; see `assets/LOGO_USAGE.md` for layout choices.
 - `CNAME`: GitHub Pages custom domain, copied into the deployed site.
 
-To add a product, add a unique lowercase slug and a local logo asset path to the catalog and create its privacy policy in its content directory. Never reuse TrackLogs disclosures without verifying the new product's behavior. Pages use relative URLs and work on a repository subpath or a custom domain. Product destinations accept HTTPS URLs only.
+To add a product, add a unique lowercase slug and a local logo asset path to the catalog and verify that the shared policies accurately cover its practices. Never reuse TrackLogs disclosures without verifying the new product's behavior. Pages use relative URLs and work on a repository subpath or a custom domain. Product destinations accept HTTPS URLs only.
 
 ## Publishing
 
@@ -47,7 +47,7 @@ GitHub Pages uses **GitHub Actions**. The supplied workflow checks previews for 
 
 The custom domain is `oddmatter.space`, served over HTTPS. The existing GitHub repository name remains unchanged.
 
-Policy paths: `/privacy/` (with a `#tracklogs` anchor) and `/terms/` (site-wide). The generated site includes only public assets/content. Never upload the entire source repository as the Pages artifact.
+Policy paths: `/privacy/` and `/terms/` (both site-wide). The generated site includes only public assets/content. Never upload the entire source repository as the Pages artifact.
 
 ## Scope
 

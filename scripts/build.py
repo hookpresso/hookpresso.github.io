@@ -64,21 +64,7 @@ def draft_notice():
     return '' if c['publication_ready'] else '<div class="draft"><strong>Draft for review.</strong> Some policy details are awaiting confirmation. This version is not effective.</div>'
 
 
-def contact():
-    return f'<section class="contact"><h2>Contact</h2><p>{e(c["operator"])}</p><p>For support or questions about these policies, email <a href="mailto:{e(c["email"])}">{e(c["email"])}</a>.</p></section>'
-
-
-def policy_content(doc, anchor_prefix=''):
-    toc, sections = [], []
-    for i, section in enumerate(doc['sections'], 1):
-        anchor = f'{anchor_prefix}section-{i}'
-        toc.append(f'<li><a href="#{anchor}">{e(section["title"])}</a></li>')
-        sections.append(f'<section id="{anchor}"><h2>{i}. {e(section["title"])}</h2><p>{e(section["body"])}</p></section>')
-    return ''.join(toc), ''.join(sections)
-
-
 products = c['products']
-docs = {}
 for product in products:
     slug = product['slug']
     if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', slug):
@@ -86,15 +72,13 @@ for product in products:
     logo_path = Path(product['logo'])
     if logo_path.is_absolute() or '..' in logo_path.parts or not (ROOT / logo_path).is_file():
         raise SystemExit('Invalid product logo')
-    docs[slug] = {kind: json.loads((ROOT / 'content' / slug / f'{kind}.json').read_text())
-                  for kind in ['privacy']}
 
 cards = []
 for product in products:
     slug = product['slug']
     cards.append(f'''<article class="card product-card">{logo(product, './')}<div class="product-copy"><h3>{e(product['name'])}</h3>
 <p class="product-tagline">{e(product['tagline'])}</p><p>{e(product['description'])}</p>{tags(product)}
-<div class="links"><a href="privacy/index.html#{slug}">Privacy Policy</a><a href="terms/index.html">Terms of Service</a></div></div></article>''')
+<div class="links"><a href="privacy/index.html">Privacy Policy</a><a href="terms/index.html">Terms of Service</a></div></div></article>''')
 body = f'''<div class="home-hero"><div class="hero"><span class="eyebrow">Independent apps by Oddmatter</span>
 <h1>Thoughtful apps.<br>For everyday life.</h1><p class="lead">Oddmatter is a home for independent apps that help you keep track of what matters and make everyday tasks a little simpler.</p></div>
 <div class="brand-panel"><img src="./assets/oddmatter-logo-pack/lockup-stacked-color.svg" alt="" width="605" height="262"></div></div>
@@ -102,20 +86,37 @@ body = f'''<div class="home-hero"><div class="hero"><span class="eyebrow">Indepe
 <section class="info"><div><span class="eyebrow">Say hello</span><h2>Ideas, questions, or feedback?</h2></div><div><p>We’d love to hear from you.</p><p><a href="mailto:{e(c['email'])}">{e(c['email'])}</a></p><a href="about/index.html">About Oddmatter →</a></div></section>'''
 page('index.html', 'Home', body, './', 'home')
 
-for kind, title in [('privacy', 'Privacy Policy')]:
-    app_links, contents = [], []
-    for product in products:
-        slug = product['slug']
-        doc = docs[slug][kind]
-        toc, sections = policy_content(doc, slug + '-')
-        app_links.append(f'<li><a href="#{slug}">{e(product["name"])}</a><ol>{toc}</ol></li>')
-        contents.append(f'''<div class="app-policy" id="{slug}"><div class="policy-product">{logo(product, '../')}<div><span class="eyebrow">App-specific details</span>
-<h2>{e(product['name'])}</h2><p class="meta">Last updated: {e(doc['updated'])} · Effective: {e(c['effective_date'] or 'Not yet effective')}</p></div></div>{sections}</div>''')
-    intro = ('Learn how information is handled across our apps. Each app’s practices are explained in its section below.' if kind == 'privacy'
-             else 'Find the terms for using our apps. Each app’s terms are set out in its section below.')
-    body = f'''<div class="legal-head"><span class="eyebrow">All Oddmatter apps</span><h1>{title}</h1><p class="lead">{intro}</p>{draft_notice()}</div>
-<div class="legal-grid"><aside aria-label="Apps and sections"><strong>On this page</strong><ol>{''.join(app_links)}</ol></aside><article>{''.join(contents)}{contact()}</article></div>'''
-    page(f'{kind}/index.html', title, body, '../', kind)
+# Keep the supplied site-wide privacy wording; only branding is substituted.
+privacy = (ROOT / 'content/privacy.txt').read_text()
+privacy_toc, privacy_sections = [], []
+privacy_headings = {'We Do Not Collect Personal Information', 'Non-Personal Information',
+                    '1. Session and Available Data：', '2. Log Data:',
+                    '3. Google and Facebook Analytics', '4. Cookies', '5. User Feedback:'}
+
+
+def privacy_inline(text):
+    # Render the supplied Markdown links while escaping all document text.
+    parts, cursor = [], 0
+    for match in re.finditer(r'\[([^\]]+)\]\((https://[^\s)]+)\)', text):
+        parts.append(e(text[cursor:match.start()]))
+        parts.append(f'<a href="{e(match.group(2))}">{e(match.group(1))}</a>')
+        cursor = match.end()
+    parts.append(e(text[cursor:]))
+    return ''.join(parts)
+
+
+for line in privacy.splitlines():
+    if not line.strip():
+        continue
+    if line.strip() in privacy_headings:
+        anchor = f'privacy-section-{len(privacy_toc) + 1}'
+        privacy_toc.append(f'<li><a href="#{anchor}">{e(line.strip())}</a></li>')
+        privacy_sections.append(f'<h2 id="{anchor}">{e(line.strip())}</h2>')
+    else:
+        privacy_sections.append(f'<p>{privacy_inline(line)}</p>')
+body = f'''<div class="legal-head"><h1>Privacy Policy</h1>{draft_notice()}</div>
+<div class="legal-grid"><aside aria-label="On this page"><strong>On this page</strong><ul class="terms-toc">{''.join(privacy_toc)}</ul></aside><article>{''.join(privacy_sections)}</article></div>'''
+page('privacy/index.html', 'Privacy Policy', body, '../', 'privacy')
 
 # Site-wide terms have their own effective date, independent of privacy review.
 terms = (ROOT / 'content/terms.txt').read_text()
