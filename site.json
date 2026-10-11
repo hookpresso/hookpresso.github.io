@@ -1,6 +1,6 @@
 {
-  "name": "hookpresso",
-  "operator": "hookpresso",
+  "name": "oddmatter.space",
+  "operator": "Oddmatter",
   "email": "",
   "effective_date": "",
   "publication_ready": false,
@@ -19,5 +19,6 @@
       "url": ""
     }
   ],
-  "profile_url": "https://github.com/hookpresso"
+  "profile_url": "https://github.com/hookpresso",
+  "url": "https://oddmatter.space"
 }

@@ -1,4 +1,4 @@
-# hookpresso.github.io
+# oddmatter.space
 
 A dependency-free, multi-product legal-policy website for GitHub Pages. TrackLogs is the first product. Policy organization is inspired by the user-provided TickTick references; the text is adapted to TrackLogs rather than copied as factual promises.
 
@@ -19,6 +19,8 @@ Open http://localhost:8088. Generated files stay in ignored `_site/`.
 - `site.json`: site name, legal operator, support email, effective date, product catalog.
 - `content/<product>/privacy.json` and `terms.json`: independent product policies.
 - `assets/style.css`: responsive theme, print styles, keyboard focus states.
+- `assets/oddmatter-logo-pack/`: supplied brand artwork; see `assets/LOGO_USAGE.md` for layout choices.
+- `CNAME`: GitHub Pages custom domain, copied into the deployed site.
 
 To add a product, add a unique lowercase slug to the catalog and create both policy files in its content directory. Never reuse TrackLogs disclosures without verifying the new product's behavior. Pages use relative URLs and work on a repository subpath or a custom domain. Product destinations accept HTTPS URLs only.
 
@@ -28,9 +30,11 @@ Complete PUBLICATION_CHECKLIST.md and set `publication_ready` to true only after
 
 Repository: https://github.com/hookpresso/hookpresso.github.io
 
-Website: https://hookpresso.github.io/
+Website: https://oddmatter.space/
 
 GitHub Pages uses **GitHub Actions**. The supplied workflow checks previews for pull requests and deploys the current site on main pushes or manual runs. Draft policy notices remain visible until publication review is complete; deployment does not mark policies effective. The GitHub Pages environment restricts deployment to main.
+
+The custom domain is `oddmatter.space`, served over HTTPS. The existing GitHub repository name remains unchanged.
 
 Stable policy paths: `/tracklogs/privacy/` and `/tracklogs/terms/`. The generated site includes only public assets/content. Never upload the entire source repository as the Pages artifact.
 
