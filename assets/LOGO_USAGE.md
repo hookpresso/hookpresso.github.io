@@ -7,7 +7,7 @@ The original static pack contains 17 SVGs and the supplied animated pack contain
 - Footer: the same white horizontal lockup as the header, at 170px wide on desktop and 150px on mobile, with adjacent operator text.
 - Browser tab: `oddmatter-logo-pack/favicon.svg` (64 × 64).
 
-The shared renderer embeds the supplied SVG artwork directly, with its original animation styles replaced by scoped page styles. The complete logo is immediately visible, white dots pulse continuously, and the yellow accent floats visibly. All pages use the same header/footer artwork and motion. CSS respects `prefers-reduced-motion`, displaying the complete artwork without animation. No page scripts are needed.
+The shared renderer embeds the supplied SVG artwork directly, with its original animation styles replaced by scoped page styles. The complete logo is immediately visible, white dots pulse continuously, and the yellow accent floats visibly. All pages use the same header/footer artwork and motion. Logo animations play regardless of the device reduced-motion setting, as requested. The build removes the supplied global reduced-motion override from generated SVG copies while preserving the original source pack. No page scripts are needed.
 
 The space theme uses a midnight background, soft blue and violet glows, static stars, and pale text. Decorative orbits are CSS shapes, not modifications to the logo. Preserve the artwork's proportions, spacing, and suffix opacity; do not crop or reconstruct the wordmark.
 

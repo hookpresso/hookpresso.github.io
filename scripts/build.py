@@ -22,6 +22,12 @@ if OUT.exists():
     shutil.rmtree(OUT)
 OUT.mkdir()
 shutil.copytree(ROOT / 'assets', OUT / 'assets', dirs_exist_ok=True)
+# Remove the supplied global motion override from generated SVG copies.
+# Preserve the original logo pack; inline logos already discard embedded styles.
+for svg_path in (OUT / 'assets/oddmatter-logo-animated-pack').glob('*.svg'):
+    svg = svg_path.read_text()
+    svg = svg.replace('@media (prefers-reduced-motion:reduce){*{animation:none!important}}', '')
+    svg_path.write_text(svg)
 (OUT / '.nojekyll').write_text('')
 shutil.copyfile(ROOT / 'CNAME', OUT / 'CNAME')
 NAVIGATION = [('home', 'index.html', 'Home'), ('privacy', 'privacy/index.html', 'Privacy Policy'),

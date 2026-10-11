@@ -50,4 +50,3 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
 .toc-subsections{list-style:none;padding-left:20px;margin:12px 0 4px;border-left:1px solid var(--line)}
 .toc-subsections a{font-size:12px}article h3{font-size:20px;letter-spacing:-.4px;scroll-margin-top:28px;margin:28px 0 14px}article p+h2{margin-top:44px}
 @media(max-width:700px){aside .terms-toc{columns:auto}.footer-brand .brand-logo{width:150px}}
-@media(prefers-reduced-motion:reduce){.brand-logo .logo-dot,.brand-logo .logo-float{animation:none!important}}
