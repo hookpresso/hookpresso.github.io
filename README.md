@@ -1,6 +1,6 @@
 # oddmatter.space
 
-A dependency-free, multi-product website for GitHub Pages. TrackLogs is the first product. The Privacy Policy uses the user-supplied TickTick text with Oddmatter branding and contact email, and remains marked as a draft.
+A dependency-free, multi-product website for GitHub Pages. TrackLogs is the first product. The Privacy Policy uses original Oddmatter wording based on the supplied disclosures and is effective from 11 October 2026.
 
 ## Local preview
 
@@ -21,12 +21,12 @@ Open http://localhost:8088. Generated files stay in ignored `_site/`.
 - `/terms/`: site-wide Terms of Service for Oddmatter services.
 - `/about/`: About Us and contact at `ping@oddmatter.space`.
 
-The site has only these four pages. The build generates `sitemap.xml` for these routes and clears old generated output before rebuilding. The Privacy Policy uses the supplied site-wide wording with only branding and email replacements, and retains its draft status. Terms of Service uses original site-wide Oddmatter wording and is effective from 11 October 2026. Its `terms_effective_date` is independent of the Privacy Policy's draft status.
+The site has only these four pages. The build generates `sitemap.xml` for these routes and clears old generated output before rebuilding. The Privacy Policy applies across Oddmatter services and is effective from 11 October 2026. Terms of Service uses original site-wide Oddmatter wording and is effective from 11 October 2026. Its `terms_effective_date` is configured independently of the Privacy Policy's effective date.
 
 ## Edit content
 
 - `site.json`: site name, legal operator, support email, effective date, product catalog.
-- `content/privacy.txt`: supplied site-wide Privacy Policy text.
+- `content/privacy.txt`: original site-wide Privacy Policy wording.
 - `content/terms.txt`: site-wide Terms of Service text.
 - `site.json` → `terms_effective_date`: effective date for the terms only.
 - `assets/style.css`: responsive theme, print styles, keyboard focus states.
@@ -37,13 +37,13 @@ To add a product, add a unique lowercase slug and a local logo asset path to the
 
 ## Publishing
 
-Complete PUBLICATION_CHECKLIST.md and set `publication_ready` to true only after resolving policy drafts. `python3 scripts/build.py --production` verifies required operator fields. This check cannot establish legal or factual accuracy.
+The owner authorized publication of the Privacy Policy effective 11 October 2026. `publication_ready` controls its public status; PUBLICATION_CHECKLIST.md tracks separate implementation review items. `python3 scripts/build.py --production` verifies required operator fields. This check cannot establish legal or factual accuracy.
 
 Repository: https://github.com/hookpresso/hookpresso.github.io
 
 Website: https://oddmatter.space/
 
-GitHub Pages uses **GitHub Actions**. The supplied workflow checks previews for pull requests and deploys the current site on main pushes or manual runs. The Privacy Policy retains its draft notice until its publication review is complete. Terms of Service displays its independently configured effective date. The GitHub Pages environment restricts deployment to main.
+GitHub Pages uses **GitHub Actions**. The supplied workflow checks previews for pull requests and deploys the current site on main pushes or manual runs. The Privacy Policy displays its configured effective date. Terms of Service displays its independently configured effective date. The GitHub Pages environment restricts deployment to main.
 
 The custom domain is `oddmatter.space`, served over HTTPS. The existing GitHub repository name remains unchanged.
 

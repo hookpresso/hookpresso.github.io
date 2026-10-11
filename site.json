@@ -2,8 +2,8 @@
   "name": "oddmatter.space",
   "operator": "Oddmatter",
   "email": "ping@oddmatter.space",
-  "effective_date": "",
-  "publication_ready": false,
+  "effective_date": "2026-10-11",
+  "publication_ready": true,
   "products": [
     {
       "slug": "tracklogs",

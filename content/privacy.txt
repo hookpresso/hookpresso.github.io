@@ -1,83 +1,81 @@
-When you use our services, you're trusting us with your information. We understand this is a big responsibility and work hard to protect your information and put you in control.
+This Privacy Policy explains how Oddmatter handles information when you use our applications, website at https://oddmatter.space, and related services (together, the "Services"). It applies across our products; the information involved depends on the features you choose to use.
 
-By accessing or using the Services, you agree to this Privacy Policy, and our Terms of Service. If you have any questions about this Privacy Policy, you can contact us at ping@oddmatter.space.
+Oddmatter is responsible for the information described in this policy. For privacy questions or requests, email ping@oddmatter.space. Our Terms of Service explain the conditions for using the Services. This policy describes our data practices and does not replace any separate consent required by law.
 
-Information Oddmatter Collects
+Information we receive
 
-Your activity & apps
+Account details and usage
 
-At the time you register for Oddmatter, you voluntarily give us information such as your name and email address. You have the access and can update this information under your personal Account Settings at any time. We also collect aggregated, anonymous user data about the use of the app.
+If you create an account, you provide details such as your name and email address. You can review and change these details through the account settings available in the relevant service. We also collect aggregated, anonymous usage information to understand how our apps are used.
 
-Your browsers & devices
+Browsers and devices
 
-We collect information about the browsers and devices you use to access Oddmatter. The user data we collect is used to enhance Oddmatter and the quality of our service. We only collect personal data required to deliver our services, and we only store it to the extent that it is essential to perform these services.
+We receive information about the browsers and devices that connect to the Services. We use it to support those connections and improve product quality. We limit personal information collection and storage to what is needed to provide the Services.
 
-Your Location Information
+Location-based features
 
-We collect information about your location after you open background location access to Oddmatter. The location data is used to help us offer the Location Reminder feature. Your location can be determined by Sensor data from your device. You can turn your Android device's location on or off using the device’s settings app.
+When a product offers location reminders and you grant background location access, it collects the location information needed to deliver those reminders. Device sensors may supply this information. You can manage or revoke location access in your device settings.
 
-Your avatar picture
+Profile images
 
-We collect user avatars to differentiate users and enable features such as task sharing. This information is used for functional purposes only.
+If you add an avatar, we use it to identify your profile and support functions such as sharing tasks with other users. Profile images are used for these functional purposes.
 
-Your AI Interactions
+AI requests and conversations
 
-We collect the text, audio, and transcripts you provide when you actively use our AI features. This data is collected only after you initiate a specific AI task. The information is used to help us generate the content or organize the tasks you requested. If you provide feedback on the AI-generated results (such as ratings or corrections), we also collect this feedback along with the relevant input and output context.
+When you start an AI task, we collect the text, audio, or transcripts you submit for that task. We process these inputs to create the content or organize the work you request. If you rate or correct a result, we also collect that feedback and the associated inputs and outputs so we can understand it.
 
-When you use our AI Assistant, we also collect the messages you send during the conversation, as well as your in-conversation actions such as clicks and edits. To provide a coherent, context-aware experience within a conversation, we retain your conversation history, including your inputs and AI-generated responses, for the duration of that conversation's lifecycle. You can view and delete your conversation history at any time. The AI Assistant may also access your existing Oddmatter data (such as tasks, lists, and habits) when needed to fulfill your specific requests.
+Using an AI Assistant also involves processing your messages and actions within the conversation, including clicks and edits. We keep the conversation's inputs and generated responses throughout its lifecycle to maintain context between messages. You can review and delete your conversation history. When your request requires it, the Assistant may access relevant information already held in the service, such as your tasks, lists, or habits.
 
-Why Oddmatter Collects Data
+How we use information
 
-We use data to build better services. Your information will not be shared with others and will only be used internally for the purposes described below:
+Delivering requested features
 
-Provide our services
+We process information to supply the Services, respond to requests for information, and complete transactions. For AI features, third-party AI providers process the inputs needed to generate a response. This processing is limited to the feature you request; we do not use those inputs for unrelated purposes or to train our models. An Assistant may process the conversation context to interpret your request and produce a relevant answer.
 
-We use your information to deliver our services or information you requested, and to process and complete any transactions. For our AI-powered features, we utilize third-party AI service providers to process your inputs and generate relevant outputs. We strictly limit this processing to the delivery of the specific feature, ensuring that your data is not used for any purpose unrelated to that feature, nor used to train our models. For the AI Assistant, this also includes processing your conversation context to better understand your intent and provide contextually relevant responses.
+Keeping products working
 
-Maintain & improve our services
+Usage information helps us understand trends and improve the experience. We also use information to investigate reported problems, identify outages, and maintain reliable operation.
 
-We also use your information to ensure our services are working as intended, such as tracking outages or troubleshooting issues that you report to us. And we use your information to make improvements to our services - for example, to analyze usage and trends with anonymous user data, and to improve the quality of our service and user experience.
+Responding and communicating
 
-Communicate with you
+When you email us, register through our website, or voluntarily participate in a survey, we receive the details you provide, including your email address. We use them to respond and communicate with you about the relevant request or activity.
 
-Oddmatter collects email addresses from those who communicate with us via email, as well as information provided through voluntary activities such as site registration or survey participation. We use the information we collect to interact with you directly.
+Preventing harm
 
-Protect Oddmatter, our users, and the public
+We process information to identify and address fraud, misuse, security threats, and technical problems that could affect Oddmatter, our users, or other people.
 
-We use information to help improve the safety and reliability of our services. This includes detecting, preventing, and responding to fraud, abuse, security risks, and technical issues that could harm Oddmatter, our users, or the public.
+We use information for the purposes explained here and ask for your consent before using it for a purpose outside this policy. You may contact us to ask what information we process about you, how it is handled, and why.
 
-We use different technologies to process your information for these purposes. We'll ask for your consent before using your information for a purpose that isn't covered in this Privacy Policy.
+Your data and service providers
 
-You're also welcome to contact us to ask for our confirmation whenever you feel concerned about how your personal information is being processed, where and for what purpose.
+You retain your rights to your data. Oddmatter's ownership of its software and supporting systems does not transfer those rights to us. You can control the information you provide and use the settings described in this policy.
 
-Your Privacy Controls
+We do not sell your personal information. We do not share it with third parties without your permission. Where needed to operate the Services, we use service and hosting providers, including the AI providers described above. We select providers that meet applicable GDPR requirements and apply safeguards when transferring information to and from them. Provider processing is for the service purposes explained in this policy.
 
-While Oddmatter owns the Oddmatter application's code, databases, and all rights, you retain all rights to your data. You have choices regarding the information we collect and how it's used. Oddmatter will never sell your personal data to a third party, and we will never share data with third parties without your permission. When absolutely necessary, Oddmatter uses third party services and hosting partners who are GDPR-compliant. In such instances, we take essential security methods to guarantee that we comply with GDPR when sending and receiving data from third parties.
+Website cookies
 
-Cookies
+Our website uses cookies to remember preferences and support its functions. You can block or remove cookies through your browser settings. Features that depend on cookies may become unavailable or may not work correctly when you do so.
 
-Cookies are required on Oddmatter's Website. We use them to collect visitors' preferences and thus to better optimize the user experience. Users can disable cookies in their browser settings. But please note that our services rely on cookies to function properly, and you may not be able to access certain features on our Website after disabling them.
+Protecting information
 
-Data Retention & Secure
+We use security measures designed to guard against unauthorized access, changes, disclosure, and destruction of information. Connections that transmit information through the Services are protected using SSL/TLS encryption. Operational monitoring helps us identify and block security threats. If we discover a risk that you need to know about, we will notify you and explain steps you can take. For questions about our security measures, contact ping@oddmatter.space.
 
-Oddmatter is built with strong security features that continuously protect your information. SSL protocol secures all data and information transmitted with Service. The insights we gain from maintaining our services help us detect and automatically block security threats from ever reaching you. And if we do detect something risky that we think you should know about, we'll notify you and help guide you through steps to stay better protected.
+Storage and retention
 
-We work hard to protect you and Oddmatter from unauthorized access, alteration, disclosure, or destruction of information we hold. You can learn more about our security measures from the Security page.
+We retain account information until you delete your account. After deletion, copies remain in backup archives for 90 days. Subscription and transaction records are retained after account deletion. Conversation history is retained for the conversation's lifecycle, as described in the AI section above, and you can delete it.
 
-How long we store your information
+Access, changes, and deletion
 
-We keep the information until you delete your account, and the information will keep in our backup archives for 90 days after the account is deleted. For subscriptions and transaction records, we retain this information after the account is deleted.
+You can update account details using the settings provided by the relevant service and manage device permissions in your device settings. Where account deletion is available, use that service's account controls. You can also send privacy and deletion requests to ping@oddmatter.space.
 
-Data Deletion
+When an account is closed, you can no longer access information through that account. We stop providing the associated account services and delete your personal information as requested, subject to the backup and transaction-record retention described above.
 
-You can delete your Oddmatter account with "Avatar - Settings - Account and Security" in Oddmatter website. If you terminate your Account, any association between your Account and information we store will no longer be accessible through your Account. We will stop providing products and/or services to you and delete your personal information as required by you.
+Updates to this policy
 
-Changes to This Policy
+We publish the current policy and its effective date at https://oddmatter.space/privacy/. We will not reduce your rights under this policy without your explicit consent. Material changes will receive a prominent notice, which may include an email for services where that is appropriate.
 
-If our Privacy Policy changes at some time in the future, we will not reduce your rights under this Privacy Policy without your explicit consent. We always indicate the date the latest changes were published. If changes are significant, we'll provide a more prominent notice (including, for certain services, email notification of Privacy Policy changes).
+Please review this page periodically for updates. Where applicable law permits, continued use after a revised policy takes effect indicates acceptance of that revision. Where separate consent is required, we will obtain it.
 
-Please check back periodically to keep informed of updates or changes to this Privacy Policy. By continuing to access and to use Oddmatter, you are agreeing to be bound by the revised policy.
+Contact Oddmatter
 
-To read more details and frequently asked questions about Oddmatter’s privacy and terms, please read the Privacy and Security FAQ in our Help Center.
-
-Date of Last Revision: July 9, 2026
+For questions about this policy, our handling of your information, or your privacy choices, email ping@oddmatter.space.

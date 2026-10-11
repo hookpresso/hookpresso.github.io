@@ -1,6 +1,6 @@
 # Publication review
 
-The project is functional; legal content is a draft. Do not set publication_ready until these items are resolved and draft-only sentences are rewritten.
+The owner authorized the rewritten Privacy Policy to take effect on 11 October 2026. Both policy pages now display their effective dates. The unchecked items below remain implementation and legal review work; publication status does not confirm their completion.
 
 - [ ] Confirm public brand, legal operator, contact email, effective date, and intended release markets.
 - [ ] Select governing law and dispute terms with appropriate consumer-rights protections.

@@ -89,7 +89,26 @@ page('index.html', 'Home', body, './', 'home')
 # Render site-wide privacy wording and user-requested disclosures.
 privacy = (ROOT / 'content/privacy.txt').read_text()
 privacy_toc, privacy_sections = [], []
-privacy_headings = {'How long we store your information', 'Your browsers & devices', 'Changes to This Policy', 'Information Oddmatter Collects', 'Cookies', 'Your AI Interactions', 'Your activity & apps', 'Your Privacy Controls', 'Protect Oddmatter, our users, and the public', 'Data Deletion', 'Maintain & improve our services', 'Communicate with you', 'Your avatar picture', 'Your Location Information', 'Provide our services', 'Data Retention & Secure', 'Why Oddmatter Collects Data'}
+privacy_headings = {
+    'Information we receive',
+    'Account details and usage',
+    'Browsers and devices',
+    'Location-based features',
+    'Profile images',
+    'AI requests and conversations',
+    'How we use information',
+    'Delivering requested features',
+    'Keeping products working',
+    'Responding and communicating',
+    'Preventing harm',
+    'Your data and service providers',
+    'Website cookies',
+    'Protecting information',
+    'Storage and retention',
+    'Access, changes, and deletion',
+    'Updates to this policy',
+    'Contact Oddmatter',
+}
 
 
 def privacy_inline(text):
@@ -112,7 +131,10 @@ for line in privacy.splitlines():
         privacy_sections.append(f'<h2 id="{anchor}">{e(line.strip())}</h2>')
     else:
         privacy_sections.append(f'<p>{privacy_inline(line)}</p>')
-body = f'''<div class="legal-head"><h1>Privacy Policy</h1>{draft_notice()}</div>
+privacy_date = c.get('effective_date', '')
+privacy_status = (f'<p class="meta">Effective: <time datetime="{e(privacy_date)}">{date.fromisoformat(privacy_date).strftime("%d %B %Y").lstrip("0")}</time></p>'
+                  if c['publication_ready'] and privacy_date else draft_notice())
+body = f'''<div class="legal-head"><h1>Privacy Policy</h1>{privacy_status}</div>
 <div class="legal-grid"><aside aria-label="On this page"><strong>On this page</strong><ul class="terms-toc">{''.join(privacy_toc)}</ul></aside><article>{''.join(privacy_sections)}</article></div>'''
 page('privacy/index.html', 'Privacy Policy', body, '../', 'privacy')
 
