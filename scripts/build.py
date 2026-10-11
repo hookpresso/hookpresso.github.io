@@ -89,9 +89,7 @@ page('index.html', 'Home', body, './', 'home')
 # Render site-wide privacy wording and user-requested disclosures.
 privacy = (ROOT / 'content/privacy.txt').read_text()
 privacy_toc, privacy_sections = [], []
-privacy_headings = {'We Do Not Collect Personal Information', 'Non-Personal Information',
-                    '1. Session and Available Data：', '2. Log Data:',
-                    '3. Google, Facebook and Amplitude Analytics', '4. Cookies', '5. User Feedback:', 'Your AI Interactions'}
+privacy_headings = {'How long we store your information', 'Your browsers & devices', 'Changes to This Policy', 'Information Oddmatter Collects', 'Cookies', 'Your AI Interactions', 'Your activity & apps', 'Your Privacy Controls', 'Protect Oddmatter, our users, and the public', 'Data Deletion', 'Maintain & improve our services', 'Communicate with you', 'Your avatar picture', 'Your Location Information', 'Provide our services', 'Data Retention & Secure', 'Why Oddmatter Collects Data'}
 
 
 def privacy_inline(text):

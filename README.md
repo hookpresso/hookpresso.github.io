@@ -1,6 +1,6 @@
 # oddmatter.space
 
-A dependency-free, multi-product website for GitHub Pages. TrackLogs is the first product. Policy organization is inspired by the user-provided TickTick references; the text is adapted to TrackLogs rather than copied as factual promises.
+A dependency-free, multi-product website for GitHub Pages. TrackLogs is the first product. The Privacy Policy uses the user-supplied TickTick text with Oddmatter branding and contact email, and remains marked as a draft.
 
 ## Local preview
 
