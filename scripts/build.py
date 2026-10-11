@@ -4,6 +4,7 @@ import argparse
 import json
 import re
 import shutil
+from datetime import date
 from xml.etree.ElementTree import Element, SubElement, ElementTree
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -116,7 +117,7 @@ for kind, title in [('privacy', 'Privacy Policy')]:
 <div class="legal-grid"><aside aria-label="Apps and sections"><strong>On this page</strong><ol>{''.join(app_links)}</ol></aside><article>{''.join(contents)}{contact()}</article></div>'''
     page(f'{kind}/index.html', title, body, '../', kind)
 
-# Site-wide terms preserve the supplied wording and numbering.
+# Site-wide terms have their own effective date, independent of privacy review.
 terms = (ROOT / 'content/terms.txt').read_text()
 terms_title, terms_body = terms.split('\n', 1)
 heading_pattern = re.compile(r'^(\d+\.(?:\d+)?)[ \t]+(.+?)[ \t]*$', re.MULTILINE)
@@ -137,7 +138,10 @@ for i, heading in enumerate(headings):
     paragraphs = terms_paragraphs(terms_body[heading.end():end])
     terms_toc.append(f'<li><a href="#{anchor}">{e(label)}</a></li>')
     terms_sections.append(f'<section id="{anchor}"><h2>{e(label)}</h2>{paragraphs}</section>')
-body = f'''<div class="legal-head"><h1>{e(terms_title)}</h1>{draft_notice()}</div>
+terms_date = c.get('terms_effective_date', '')
+terms_status = (f'<p class="meta">Effective: <time datetime="{e(terms_date)}">{date.fromisoformat(terms_date).strftime("%d %B %Y").lstrip("0")}</time></p>'
+                if terms_date else draft_notice())
+body = f'''<div class="legal-head"><h1>{e(terms_title)}</h1>{terms_status}</div>
 <div class="legal-grid"><aside aria-label="On this page"><strong>On this page</strong><ul class="terms-toc">{''.join(terms_toc)}</ul></aside><article>{''.join(terms_sections)}</article></div>'''
 page('terms/index.html', terms_title, body, '../', 'terms')
 

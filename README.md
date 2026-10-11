@@ -21,13 +21,14 @@ Open http://localhost:8088. Generated files stay in ignored `_site/`.
 - `/terms/`: site-wide Terms of Service for Oddmatter services.
 - `/about/`: About Us and contact at `ping@oddmatter.space`.
 
-The site has only these four pages. The build generates `sitemap.xml` for these routes and clears old generated output before rebuilding. The Privacy Policy loads each product's own disclosures. Terms of Service uses the supplied site-wide text, with only company, website, and email placeholders replaced.
+The site has only these four pages. The build generates `sitemap.xml` for these routes and clears old generated output before rebuilding. The Privacy Policy loads each product's own disclosures. Terms of Service uses original site-wide Oddmatter wording and is effective from 11 October 2026. Its `terms_effective_date` is independent of the Privacy Policy's draft status.
 
 ## Edit content
 
 - `site.json`: site name, legal operator, support email, effective date, product catalog.
 - `content/<product>/privacy.json`: product privacy disclosures.
-- `content/terms.txt`: supplied site-wide Terms of Service text.
+- `content/terms.txt`: site-wide Terms of Service text.
+- `site.json` → `terms_effective_date`: effective date for the terms only.
 - `assets/style.css`: responsive theme, print styles, keyboard focus states.
 - `assets/oddmatter-logo-pack/`: supplied brand artwork; see `assets/LOGO_USAGE.md` for layout choices.
 - `CNAME`: GitHub Pages custom domain, copied into the deployed site.
@@ -42,7 +43,7 @@ Repository: https://github.com/hookpresso/hookpresso.github.io
 
 Website: https://oddmatter.space/
 
-GitHub Pages uses **GitHub Actions**. The supplied workflow checks previews for pull requests and deploys the current site on main pushes or manual runs. Draft policy notices remain visible until publication review is complete; deployment does not mark policies effective. The GitHub Pages environment restricts deployment to main.
+GitHub Pages uses **GitHub Actions**. The supplied workflow checks previews for pull requests and deploys the current site on main pushes or manual runs. The Privacy Policy retains its draft notice until its publication review is complete. Terms of Service displays its independently configured effective date. The GitHub Pages environment restricts deployment to main.
 
 The custom domain is `oddmatter.space`, served over HTTPS. The existing GitHub repository name remains unchanged.
 
