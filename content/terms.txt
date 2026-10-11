@@ -1,5 +1,5 @@
 Terms of Service
-These Terms of Service describe the agreement between you and Oddmatter ("Oddmatter", "we", "us", or "our") when you use our applications, software, website at https://oddmatter.space, related content, or support services. Together, these offerings are called the "Services". Read these terms before using the Services. You can reach us at ping@oddmatter.space with questions about this agreement.
+These Terms of Service describe the agreement between you and Oddmatter ("Oddmatter", "we", "us", or "our") when you use our applications, software, website at https://oddmatter.space/, related content, or support services. Together, these offerings are called the "Services". Read these terms before using the Services. You can reach us at ping@oddmatter.space with questions about this agreement.
 
 1. Agreeing to these terms
 
@@ -163,4 +163,4 @@ These terms are written in English. If we provide a translation and it differs f
 
 21. Contact Oddmatter
 
-For questions about these terms or the Services, email ping@oddmatter.space. Our website is https://oddmatter.space.
+For questions about these terms or the Services, email ping@oddmatter.space. Our website is https://oddmatter.space/.

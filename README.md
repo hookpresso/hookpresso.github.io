@@ -21,7 +21,7 @@ Open http://localhost:8088. Generated files stay in ignored `_site/`.
 - `/terms/`: site-wide Terms of Service for Oddmatter services.
 - `/about/`: About Us and contact at `ping@oddmatter.space`.
 
-The site has only these four pages. The build generates `sitemap.xml` for these routes and clears old generated output before rebuilding. The Privacy Policy applies across Oddmatter services and is effective from 11 October 2026. Terms of Service uses original site-wide Oddmatter wording and is effective from 11 October 2026. Its `terms_effective_date` is configured independently of the Privacy Policy's effective date.
+The site has only these four pages. Navigation uses directory URLs. Visits to an explicit `index.html` address are redirected in the browser to the corresponding directory URL, preserving query parameters and fragments. The build generates `sitemap.xml` for these routes and clears old generated output before rebuilding. The Privacy Policy applies across Oddmatter services and is effective from 11 October 2026. Terms of Service uses original site-wide Oddmatter wording and is effective from 11 October 2026. Its `terms_effective_date` is configured independently of the Privacy Policy's effective date.
 
 ## Edit content
 
@@ -52,4 +52,4 @@ Policy paths: `/privacy/` and `/terms/` (both site-wide). The generated site inc
 
 ## Scope
 
-This project does not modify TrackLogs or update its in-app policy links. The website includes no client-side analytics or external fonts. GitHub Pages itself has hosting request processing. Review operator identity, release-build behavior, and relevant jurisdictions before publishing.
+This project does not modify TrackLogs or update its in-app policy links. The website uses Google Analytics (`G-K8CHP1QJ6S`) on all four pages and includes no external fonts. The measurement ID is configured with `google_analytics_id` in `site.json`. Legacy `index.html` redirects do not initialize the Analytics configuration; their clean-URL destinations do. GitHub Pages itself has hosting request processing. Review operator identity, release-build behavior, and relevant jurisdictions before publishing.

@@ -3,6 +3,7 @@ from html import escape as e
 import argparse
 import json
 import hashlib
+import math
 import re
 import shutil
 from datetime import date
@@ -30,10 +31,25 @@ for svg_path in (OUT / 'assets/oddmatter-logo-animated-pack').glob('*.svg'):
     svg_path.write_text(svg)
 (OUT / '.nojekyll').write_text('')
 shutil.copyfile(ROOT / 'CNAME', OUT / 'CNAME')
-NAVIGATION = [('home', 'index.html', 'Home'), ('privacy', 'privacy/index.html', 'Privacy Policy'),
-              ('terms', 'terms/index.html', 'Terms of Service'), ('about', 'about/index.html', 'About Us')]
+NAVIGATION = [('home', '', 'Home'), ('privacy', 'privacy/', 'Privacy Policy'),
+              ('terms', 'terms/', 'Terms of Service'), ('about', 'about/', 'About Us')]
 urls = []
 style_version = hashlib.sha256((ROOT / "assets/style.css").read_bytes()).hexdigest()[:10]
+
+ga_id = c.get('google_analytics_id', '')
+if ga_id and not re.fullmatch(r'G-[A-Z0-9]+', ga_id):
+    raise SystemExit('Invalid Google Analytics measurement ID')
+analytics_tag = f'''<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={e(ga_id)}"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){{dataLayer.push(arguments);}}
+gtag('js', new Date());
+// Only initialize analytics on the destination, not the legacy redirect page.
+if (!location.pathname.endsWith('/index.html')) {{
+    gtag('config', {json.dumps(ga_id)});
+}}
+</script>''' if ga_id else ''
 
 
 def brand_svg(layout='horizontal'):
@@ -46,6 +62,56 @@ def brand_svg(layout='horizontal'):
     for original, scoped in [('d', 'logo-dot'), ('f', 'logo-float'), ('o', 'logo-accent'), ('t', 'logo-type')]:
         svg = svg.replace(f'class="{original}"', f'class="{scoped}"')
     return svg
+
+
+def hero_logo():
+    # Place the supplied stacked artwork inside a responsive orbital scene.
+    artwork = brand_svg('stacked')
+    artwork, removed = re.subn(r'<g class="logo-float"><circle class="logo-accent"[^>]*/></g>', '', artwork)
+    if removed != 1:
+        raise SystemExit('Expected one yellow accent in the stacked logo')
+    artwork = artwork.replace('class="brand-logo"', 'class="brand-logo hero-wordmark"')
+    artwork = re.sub(r'animation-delay:([0-9.]+)s', lambda m: f'animation-delay:{float(m.group(1)) * 3:.2f}s', artwork)
+    artwork = artwork.replace('width="605" height="262"', 'x="26.4" y="136.16" width="387.2" height="167.68"')
+    rest = (247.52, 159.84)
+    angle = math.radians(38)
+    rx, ry = 210, 164
+
+    def ellipse(t):
+        x, y = rx * math.cos(t), ry * math.sin(t)
+        return (220 + x * math.cos(angle) - y * math.sin(angle),
+                220 + x * math.sin(angle) + y * math.cos(angle))
+
+    entry, opposite = ellipse(-math.pi / 2), ellipse(math.pi / 2)
+    launch = [rest, (260, 135), (entry[0] - 25, entry[1] - 10), entry]
+    returning = [entry, (entry[0] + 20, entry[1] + 65), (rest[0] + 45, rest[1] - 5), rest]
+
+    def point(p):
+        return f'{p[0]:.5f},{p[1]:.5f}'
+
+    def bezier(points, t):
+        return tuple(sum(points[i][axis] * weight for i, weight in enumerate(
+            ((1-t)**3, 3*(1-t)**2*t, 3*(1-t)*t*t, t**3))) for axis in (0, 1))
+
+    def length(points):
+        return sum(math.dist(a, b) for a, b in zip(points, points[1:]))
+
+    steps = 2000
+    launch_length = length([bezier(launch, i / steps) for i in range(steps + 1)])
+    orbit_length = length([ellipse(-math.pi / 2 + 2 * math.pi * i / steps) for i in range(steps + 1)])
+    return_length = length([bezier(returning, i / steps) for i in range(steps + 1)])
+    total = launch_length + orbit_length + return_length
+    path = (f'M {point(rest)} C ' + ' '.join(point(p) for p in launch[1:]) +
+            f' A {rx},{ry} 38 0 1 {point(opposite)} A {rx},{ry} 38 0 1 {point(entry)} C ' +
+            ' '.join(point(p) for p in returning[1:]))
+    key_points = f'0;0;{launch_length / total:.8f};{(launch_length + orbit_length) / total:.8f};1;1'
+    return f'''<svg class="hero-orbit-visual" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" aria-hidden="true" focusable="false">
+<ellipse class="orbit-ring orbit-ring-inner" cx="220" cy="220" rx="184.8" ry="120.12" transform="rotate(-28 220 220)"/>
+<ellipse class="orbit-ring orbit-ring-outer" cx="220" cy="220" rx="210" ry="164" transform="rotate(38 220 220)"/>
+{artwork}
+<circle class="hero-traveler" r="5.12" fill="#FFD60A">
+<animateMotion dur="14s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.14285714;0.22857143;0.8;0.88571429;1" keyPoints="{key_points}" path="{path}"/>
+</circle></svg>'''
 
 
 def render_toc(entries):
@@ -71,13 +137,19 @@ def page(path, title, body, prefix, active):
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="{e(title)} — apps and information from {e(c['name'])}.">
 <title>{e(title)} · {e(c['name'])}</title><link rel="canonical" href="{e(canonical)}">
+<script>
+if (/^https?:$/.test(location.protocol) && location.pathname.endsWith('/index.html')) {{
+    location.replace(location.pathname.slice(0, -10) + location.search + location.hash);
+}}
+</script>
+{analytics_tag}
 <meta name="theme-color" content="#080a18"><link rel="icon" type="image/svg+xml" href="{prefix}assets/oddmatter-logo-pack/favicon.svg">
 <link rel="stylesheet" href="{prefix}assets/style.css?v={style_version}"></head><body>
 <a class="skip" href="#main">Skip to content</a><header><div class="wrap">
-<a class="brand" href="{prefix}index.html" aria-label="{e(c['name'])} home">{brand_svg()}</a>
+<a class="brand" href="{prefix}" aria-label="{e(c['name'])} home">{brand_svg()}</a>
 <nav aria-label="Main">{navigation}</nav></div></header>
 <main id="main" class="wrap">{body}</main><footer><div class="wrap">
-<span class="footer-brand"><a class="brand" href="{prefix}index.html" aria-label="{e(c['name'])} home">{brand_svg()}</a><span>© 2026 {e(c['operator'] or c['name'])}</span></span>
+<span class="footer-brand"><a class="brand" href="{prefix}" aria-label="{e(c['name'])} home">{brand_svg()}</a><span>© 2026 {e(c['operator'] or c['name'])}</span></span>
 <a href="mailto:{e(c['email'])}">{e(c['email'])}</a></div></footer></body></html>'''
     target = OUT / path
     target.parent.mkdir(parents=True, exist_ok=True)
@@ -110,12 +182,12 @@ for product in products:
     slug = product['slug']
     cards.append(f'''<article class="card product-card">{logo(product, './')}<div class="product-copy"><h3>{e(product['name'])}</h3>
 <p class="product-tagline">{e(product['tagline'])}</p><p>{e(product['description'])}</p>{tags(product)}
-<div class="links"><a href="privacy/index.html">Privacy Policy</a><a href="terms/index.html">Terms of Service</a></div></div></article>''')
+<div class="links"><a href="privacy/">Privacy Policy</a><a href="terms/">Terms of Service</a></div></div></article>''')
 body = f'''<div class="home-hero"><div class="hero"><span class="eyebrow">Independent apps by Oddmatter</span>
-<h1>Thoughtful apps.<br><span>For everyday life.</span></h1><p class="lead">Oddmatter is a home for independent apps that help you keep track of what matters and make everyday tasks a little simpler.</p><div class="hero-actions"><a class="button" href="#products">Explore our apps <span aria-hidden="true">↗</span></a><a href="about/index.html">Meet Oddmatter →</a></div></div>
-<div class="brand-panel"><span class="orbit-dot" aria-hidden="true"></span>{brand_svg('stacked')}<span class="orbit-caption" aria-hidden="true">A little space for good ideas</span></div></div>
+<h1>Thoughtful apps.<br><span>For everyday life.</span></h1><p class="lead">Oddmatter is a home for independent apps that help you keep track of what matters and make everyday tasks a little simpler.</p><div class="hero-actions"><a class="button" href="#products">Explore our apps <span aria-hidden="true">↗</span></a><a href="about/">Meet Oddmatter →</a></div></div>
+<div class="brand-scene"><div class="brand-panel">{hero_logo()}</div><span class="orbit-caption" aria-hidden="true">A little space for good ideas</span></div></div>
 <section id="products"><div class="section-head"><h2>Our apps</h2><span class="meta">Made for everyday use</span></div><div class="cards">{''.join(cards)}</div></section>
-<section class="info"><div><span class="eyebrow">Say hello</span><h2>Ideas, questions, or feedback?</h2></div><div><p>We’d love to hear from you.</p><p><a href="mailto:{e(c['email'])}">{e(c['email'])}</a></p><a href="about/index.html">About Oddmatter →</a></div></section>'''
+<section class="info"><div><span class="eyebrow">Say hello</span><h2>Ideas, questions, or feedback?</h2></div><div><p>We’d love to hear from you.</p><p><a href="mailto:{e(c['email'])}">{e(c['email'])}</a></p><a href="about/">About Oddmatter →</a></div></section>'''
 page('index.html', 'Home', body, './', 'home')
 
 # Render site-wide privacy wording and user-requested disclosures.

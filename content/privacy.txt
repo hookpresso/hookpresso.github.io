@@ -1,4 +1,4 @@
-This Privacy Policy explains how Oddmatter handles information when you use our applications, website at https://oddmatter.space, and related services (together, the "Services"). It applies across our products; the information involved depends on the features you choose to use.
+This Privacy Policy explains how Oddmatter handles information when you use our applications, website at https://oddmatter.space/, and related services (together, the "Services"). It applies across our products; the information involved depends on the features you choose to use.
 
 Oddmatter is responsible for the information described in this policy. For privacy questions or requests, email ping@oddmatter.space. Our Terms of Service explain the conditions for using the Services. This policy describes our data practices and does not replace any separate consent required by law.
 
@@ -7,6 +7,8 @@ Information we receive
 Account details and usage
 
 If you create an account, you provide details such as your name and email address. You can review and change these details through the account settings available in the relevant service. We also collect aggregated, anonymous usage information to understand how our apps are used.
+
+On our website, we use Google Analytics to measure page visits and understand how people use the site. This may involve cookies, browser and device information, usage events, and online identifiers; this data is not necessarily anonymous. See [how Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites) for more information.
 
 Browsers and devices
 
