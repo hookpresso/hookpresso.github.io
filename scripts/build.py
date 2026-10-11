@@ -91,7 +91,7 @@ privacy = (ROOT / 'content/privacy.txt').read_text()
 privacy_toc, privacy_sections = [], []
 privacy_headings = {'We Do Not Collect Personal Information', 'Non-Personal Information',
                     '1. Session and Available Data：', '2. Log Data:',
-                    '3. Google and Facebook Analytics', '4. Cookies', '5. User Feedback:'}
+                    '3. Google, Facebook and Amplitude Analytics', '4. Cookies', '5. User Feedback:'}
 
 
 def privacy_inline(text):
