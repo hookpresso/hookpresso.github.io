@@ -16,7 +16,9 @@ if args.production and (not c['publication_ready'] or not all(
 )):
     raise SystemExit('Publication is not ready: complete site.json and PUBLICATION_CHECKLIST.md, then set publication_ready=true.')
 OUT = ROOT / '_site'
-OUT.mkdir(exist_ok=True)
+if OUT.exists():
+    shutil.rmtree(OUT)
+OUT.mkdir()
 shutil.copytree(ROOT / 'assets', OUT / 'assets', dirs_exist_ok=True)
 (OUT / '.nojekyll').write_text('')
 shutil.copyfile(ROOT / 'CNAME', OUT / 'CNAME')
@@ -85,29 +87,13 @@ for product in products:
         raise SystemExit('Invalid product logo')
     docs[slug] = {kind: json.loads((ROOT / 'content' / slug / f'{kind}.json').read_text())
                   for kind in ['privacy', 'terms']}
-    product_body = f'''<div class="hero">{logo(product, '../')}<span class="eyebrow">An Oddmatter app</span>
-<h1>{e(product['name'])}</h1><p class="lead">{e(product['tagline'])}</p><p class="product-description">{e(product['description'])}</p>{tags(product)}
-<div class="links"><a href="../privacy/index.html#{slug}">Privacy Policy →</a><a href="../terms/index.html#{slug}">Terms of Service →</a></div></div>'''
-    if product.get('url'):
-        if not product['url'].startswith('https://'):
-            raise SystemExit('Product URLs must use HTTPS')
-        product_body += f'<p><a href="{e(product["url"])}">Open {e(product["name"])}</a></p>'
-    page(f'{slug}/index.html', product['name'], product_body, '../', 'home')
-    # Preserve existing product policy routes for app links and bookmarks.
-    for kind in ['privacy', 'terms']:
-        doc = docs[slug][kind]
-        toc, sections = policy_content(doc)
-        body = f'''<div class="legal-head"><a href="../../{kind}/index.html">← All apps · {e(doc['title'])}</a>
-<h1>{e(product['name'])} {e(doc['title'])}</h1><p class="meta">Last updated: {e(doc['updated'])} · Effective: {e(c['effective_date'] or 'Not yet effective')}</p>{draft_notice()}</div>
-<div class="legal-grid"><aside aria-label="On this page"><strong>On this page</strong><ol>{toc}</ol></aside><article>{sections}{contact()}</article></div>'''
-        page(f'{slug}/{kind}/index.html', f'{product["name"]} {doc["title"]}', body, '../../', kind)
 
 cards = []
 for product in products:
     slug = product['slug']
     cards.append(f'''<article class="card product-card">{logo(product, './')}<div class="product-copy"><h3>{e(product['name'])}</h3>
 <p class="product-tagline">{e(product['tagline'])}</p><p>{e(product['description'])}</p>{tags(product)}
-<div class="links"><a href="{slug}/index.html">Explore {e(product['name'])} →</a><a href="privacy/index.html#{slug}">Privacy Policy</a><a href="terms/index.html#{slug}">Terms of Service</a></div></div></article>''')
+<div class="links"><a href="privacy/index.html#{slug}">Privacy Policy</a><a href="terms/index.html#{slug}">Terms of Service</a></div></div></article>''')
 body = f'''<div class="home-hero"><div class="hero"><span class="eyebrow">Independent apps by Oddmatter</span>
 <h1>Thoughtful apps.<br>For everyday life.</h1><p class="lead">Oddmatter is a home for independent apps that help you keep track of what matters and make everyday tasks a little simpler.</p></div>
 <div class="brand-panel"><img src="./assets/oddmatter-logo-pack/lockup-stacked-color.svg" alt="" width="605" height="262"></div></div>

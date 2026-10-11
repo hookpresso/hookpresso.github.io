@@ -21,7 +21,7 @@ Open http://localhost:8088. Generated files stay in ignored `_site/`.
 - `/terms/`: Terms of Service for all listed apps, with app-specific sections.
 - `/about/`: About Us and contact at `ping@oddmatter.space`.
 
-Existing `/tracklogs/`, `/tracklogs/privacy/`, and `/tracklogs/terms/` routes remain available for bookmarks and in-app links. The build generates `sitemap.xml` for all seven routes. The shared policy pages load each product's own documents; adding an app does not copy TrackLogs disclosures into that app's policy.
+The site has only these four pages. The build generates `sitemap.xml` for these routes and clears old generated output before rebuilding. The shared policy pages load each product's own documents; adding an app does not copy TrackLogs disclosures into that app's policy.
 
 ## Edit content
 
@@ -45,7 +45,7 @@ GitHub Pages uses **GitHub Actions**. The supplied workflow checks previews for 
 
 The custom domain is `oddmatter.space`, served over HTTPS. The existing GitHub repository name remains unchanged.
 
-Stable policy paths: `/tracklogs/privacy/` and `/tracklogs/terms/`. The generated site includes only public assets/content. Never upload the entire source repository as the Pages artifact.
+Policy paths: `/privacy/` and `/terms/`, with `#tracklogs` anchors for TrackLogs. The generated site includes only public assets/content. Never upload the entire source repository as the Pages artifact.
 
 ## Scope
 
