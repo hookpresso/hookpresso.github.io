@@ -54,3 +54,14 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
 @media(max-width:700px){aside .terms-toc{columns:auto}.footer-brand .brand-logo{width:150px}}
 
 @keyframes hero-dot-wave{0%,65%,100%{transform:scale(1);opacity:1}30%{transform:scale(.84);opacity:.65}48%{transform:scale(1.06);opacity:1}}
+
+/* Localized wormholes: twisted rings, a dark center and a short particle wake. */
+.wormhole{pointer-events:none}
+.wormhole-halo{fill:#7950ec30;stroke:#a48aff35;stroke-width:7}
+.wormhole-core{fill:#080a18;stroke:#ffe58b;stroke-width:1.2}
+.wormhole-ring{fill:none;stroke-width:1.2;transform-origin:0 0;animation:wormhole-twist 2.4s linear infinite}
+.wormhole-ring-a{stroke:#b7a1ff;stroke-dasharray:24 9 5 8}
+.wormhole-ring-b{stroke:#81d9ff;stroke-dasharray:18 7;animation-direction:reverse;animation-duration:1.7s}
+.wormhole-ring-c{stroke:#ffe58b;stroke-dasharray:11 5;animation-duration:1.1s}
+.wormhole-trail{pointer-events:none}
+@keyframes wormhole-twist{to{transform:rotate(360deg)}}

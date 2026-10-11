@@ -1,6 +1,7 @@
 from pathlib import Path
 from html import escape as e
 import argparse
+from bisect import bisect_left
 import json
 import hashlib
 import math
@@ -35,6 +36,7 @@ NAVIGATION = [('home', '', 'Home'), ('privacy', 'privacy/', 'Privacy Policy'),
               ('terms', 'terms/', 'Terms of Service'), ('about', 'about/', 'About Us')]
 urls = []
 style_version = hashlib.sha256((ROOT / "assets/style.css").read_bytes()).hexdigest()[:10]
+orbit_version = hashlib.sha256((ROOT / "assets/orbit.js").read_bytes()).hexdigest()[:10]
 
 ga_id = c.get('google_analytics_id', '')
 if ga_id and not re.fullmatch(r'G-[A-Z0-9]+', ga_id):
@@ -82,36 +84,49 @@ def hero_logo():
         return (220 + x * math.cos(angle) - y * math.sin(angle),
                 220 + x * math.sin(angle) + y * math.cos(angle))
 
-    entry, opposite = ellipse(-math.pi / 2), ellipse(math.pi / 2)
+    entry = ellipse(-math.pi / 2)
     launch = [rest, (260, 135), (entry[0] - 25, entry[1] - 10), entry]
     returning = [entry, (entry[0] + 20, entry[1] + 65), (rest[0] + 45, rest[1] - 5), rest]
-
-    def point(p):
-        return f'{p[0]:.5f},{p[1]:.5f}'
 
     def bezier(points, t):
         return tuple(sum(points[i][axis] * weight for i, weight in enumerate(
             ((1-t)**3, 3*(1-t)**2*t, 3*(1-t)*t*t, t**3))) for axis in (0, 1))
 
-    def length(points):
-        return sum(math.dist(a, b) for a, b in zip(points, points[1:]))
+    # Use CSS transforms, like the white dots, rather than SVG animateMotion.
+    # Sample by arc length to retain the original path and constant segment speed.
+    def frame(time, position):
+        x, y = position
+        return f'{time / 14 * 100:.8f}%{{transform:translate({x:.5f}px,{y:.5f}px)}}'
 
-    steps = 2000
-    launch_length = length([bezier(launch, i / steps) for i in range(steps + 1)])
-    orbit_length = length([ellipse(-math.pi / 2 + 2 * math.pi * i / steps) for i in range(steps + 1)])
-    return_length = length([bezier(returning, i / steps) for i in range(steps + 1)])
-    total = launch_length + orbit_length + return_length
-    path = (f'M {point(rest)} C ' + ' '.join(point(p) for p in launch[1:]) +
-            f' A {rx},{ry} 38 0 1 {point(opposite)} A {rx},{ry} 38 0 1 {point(entry)} C ' +
-            ' '.join(point(p) for p in returning[1:]))
-    key_points = f'0;0;{launch_length / total:.8f};{(launch_length + orbit_length) / total:.8f};1;1'
+    def segment_frames(curve, start_time, duration, frame_count):
+        points = [curve(i / 2000) for i in range(2001)]
+        distances = [0.0]
+        for a, b in zip(points, points[1:]):
+            distances.append(distances[-1] + math.dist(a, b))
+        frames = []
+        for i in range(frame_count + 1):
+            distance = distances[-1] * i / frame_count
+            right = max(1, min(bisect_left(distances, distance), len(points) - 1))
+            fraction = ((distance - distances[right - 1]) /
+                        (distances[right] - distances[right - 1]))
+            position = tuple(a + (b - a) * fraction
+                             for a, b in zip(points[right - 1], points[right]))
+            frames.append(frame(start_time + duration * i / frame_count, position))
+        return frames
+
+    frames = [frame(0, rest)]
+    frames += segment_frames(lambda t: bezier(launch, t), 2, 1.2, 24)
+    frames += segment_frames(lambda t: ellipse(-math.pi / 2 + 2 * math.pi * t), 3.2, 8, 160)[1:]
+    frames += segment_frames(lambda t: bezier(returning, t), 11.2, 1.2, 24)[1:]
+    frames.append(frame(14, rest))
+    orbit_keyframes = ''.join(frames)
     return f'''<svg class="hero-orbit-visual" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" aria-hidden="true" focusable="false">
 <ellipse class="orbit-ring orbit-ring-inner" cx="220" cy="220" rx="184.8" ry="120.12" transform="rotate(-28 220 220)"/>
 <ellipse class="orbit-ring orbit-ring-outer" cx="220" cy="220" rx="210" ry="164" transform="rotate(38 220 220)"/>
 {artwork}
-<circle class="hero-traveler" r="5.12" fill="#FFD60A">
-<animateMotion dur="14s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.14285714;0.22857143;0.8;0.88571429;1" keyPoints="{key_points}" path="{path}"/>
-</circle></svg>'''
+<style>.hero-traveler{{animation:hero-orbit-travel 14s linear infinite}}@keyframes hero-orbit-travel{{{orbit_keyframes}}}</style>
+<circle class="hero-traveler" r="5.12" fill="#FFD60A" transform="translate({rest[0]} {rest[1]})"/>
+</svg>'''
 
 
 def render_toc(entries):
@@ -133,6 +148,7 @@ def page(path, title, body, prefix, active):
         f'<a href="{prefix}{destination}"' + (' aria-current="page"' if key == active else '') + f'>{label}</a>'
         for key, destination, label in NAVIGATION
     )
+    motion_script = f'<script defer src="{prefix}assets/orbit.js?v={orbit_version}"></script>' if active == 'home' else ''
     html = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="{e(title)} — apps and information from {e(c['name'])}.">
@@ -144,7 +160,7 @@ if (/^https?:$/.test(location.protocol) && location.pathname.endsWith('/index.ht
 </script>
 {analytics_tag}
 <meta name="theme-color" content="#080a18"><link rel="icon" type="image/svg+xml" href="{prefix}assets/oddmatter-logo-pack/favicon.svg">
-<link rel="stylesheet" href="{prefix}assets/style.css?v={style_version}"></head><body>
+<link rel="stylesheet" href="{prefix}assets/style.css?v={style_version}">{motion_script}</head><body>
 <a class="skip" href="#main">Skip to content</a><header><div class="wrap">
 <a class="brand" href="{prefix}" aria-label="{e(c['name'])} home">{brand_svg()}</a>
 <nav aria-label="Main">{navigation}</nav></div></header>
