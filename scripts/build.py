@@ -86,12 +86,12 @@ body = f'''<div class="home-hero"><div class="hero"><span class="eyebrow">Indepe
 <section class="info"><div><span class="eyebrow">Say hello</span><h2>Ideas, questions, or feedback?</h2></div><div><p>We’d love to hear from you.</p><p><a href="mailto:{e(c['email'])}">{e(c['email'])}</a></p><a href="about/index.html">About Oddmatter →</a></div></section>'''
 page('index.html', 'Home', body, './', 'home')
 
-# Keep the supplied site-wide privacy wording; only branding is substituted.
+# Render site-wide privacy wording and user-requested disclosures.
 privacy = (ROOT / 'content/privacy.txt').read_text()
 privacy_toc, privacy_sections = [], []
 privacy_headings = {'We Do Not Collect Personal Information', 'Non-Personal Information',
                     '1. Session and Available Data：', '2. Log Data:',
-                    '3. Google, Facebook and Amplitude Analytics', '4. Cookies', '5. User Feedback:'}
+                    '3. Google, Facebook and Amplitude Analytics', '4. Cookies', '5. User Feedback:', 'Your AI Interactions'}
 
 
 def privacy_inline(text):

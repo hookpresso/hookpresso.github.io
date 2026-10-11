@@ -17,6 +17,11 @@ We may use Google Analytics, Google Firebase, Facebook Analytics and Amplitude t
 Cookies are small data files that are stored on your device by a service. Among other things, the use of cookies helps us to improve the service and your experience of the service. We use cookies to see which areas and features of the service are most popular, to count the number of devices accessing the site, to personalize your experience, and to remember your preferences. If your browser or device is set not to accept cookies or if you reject a cookie, you may not be able to access certain features or services.
 5. User Feedback:
 We may collect feedback from you on issues that you report to us, a feedback log, and any email addresses that you provide to us. This information will be used to help us better understand any problems you encounter as well as to allow us to contact you.
+Your AI Interactions
+We collect the text, audio, and transcripts you provide when you actively use our AI features. This data is collected only after you initiate a specific AI task. The information is used to help us generate the content or organize the tasks you requested. If you provide feedback on the AI-generated results (such as ratings or corrections), we also collect this feedback along with the relevant input and output context.
+
+When you use our AI Assistant, we also collect the messages you send during the conversation, as well as your in-conversation actions such as clicks and edits. To provide a coherent, context-aware experience within a conversation, we retain your conversation history, including your inputs and AI-generated responses, for the duration of that conversation's lifecycle. You can view and delete your conversation history at any time. The AI Assistant may also access your existing Oddmatter app data (such as tasks, lists, and habits) when needed to fulfill your specific requests.
+
 Personal Information – Since we do not collect Personal Information, we will not use your Personal Information in any way
 Non-Personal Information. We may use Non-Personal Information for the following purposes:
 1. For Personalized User Experience – We may use your Non-Personal Information to understand your user characteristics, and other trends related to user’s habits;
