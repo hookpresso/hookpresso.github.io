@@ -39,13 +39,13 @@ def page(path, title, body, prefix, active):
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="{e(title)} — apps and information from {e(c['name'])}.">
 <title>{e(title)} · {e(c['name'])}</title><link rel="canonical" href="{e(canonical)}">
-<meta name="theme-color" content="#2433FF"><link rel="icon" type="image/svg+xml" href="{prefix}assets/oddmatter-logo-pack/favicon.svg">
+<meta name="theme-color" content="#080a18"><link rel="icon" type="image/svg+xml" href="{prefix}assets/oddmatter-logo-pack/favicon.svg">
 <link rel="stylesheet" href="{prefix}assets/style.css"></head><body>
 <a class="skip" href="#main">Skip to content</a><header><div class="wrap">
-<a class="brand" href="{prefix}index.html"><img src="{prefix}assets/oddmatter-logo-pack/lockup-horizontal-color.svg" alt="{e(c['name'])}" width="862" height="162"></a>
+<a class="brand" href="{prefix}index.html"><img src="{prefix}assets/oddmatter-logo-animated-pack/lockup-horizontal-animated-white.svg" alt="{e(c['name'])}" width="862" height="162"></a>
 <nav aria-label="Main">{navigation}</nav></div></header>
 <main id="main" class="wrap">{body}</main><footer><div class="wrap">
-<span class="footer-brand"><img src="{prefix}assets/oddmatter-logo-pack/mark-color.svg" alt="" width="120" height="120">© 2026 {e(c['operator'] or c['name'])}</span>
+<span class="footer-brand"><img src="{prefix}assets/oddmatter-logo-animated-pack/mark-animated-white.svg" alt="" width="120" height="120">© 2026 {e(c['operator'] or c['name'])}</span>
 <a href="mailto:{e(c['email'])}">{e(c['email'])}</a></div></footer></body></html>'''
     target = OUT / path
     target.parent.mkdir(parents=True, exist_ok=True)
@@ -80,8 +80,8 @@ for product in products:
 <p class="product-tagline">{e(product['tagline'])}</p><p>{e(product['description'])}</p>{tags(product)}
 <div class="links"><a href="privacy/index.html">Privacy Policy</a><a href="terms/index.html">Terms of Service</a></div></div></article>''')
 body = f'''<div class="home-hero"><div class="hero"><span class="eyebrow">Independent apps by Oddmatter</span>
-<h1>Thoughtful apps.<br>For everyday life.</h1><p class="lead">Oddmatter is a home for independent apps that help you keep track of what matters and make everyday tasks a little simpler.</p></div>
-<div class="brand-panel"><img src="./assets/oddmatter-logo-pack/lockup-stacked-color.svg" alt="" width="605" height="262"></div></div>
+<h1>Thoughtful apps.<br><span>For everyday life.</span></h1><p class="lead">Oddmatter is a home for independent apps that help you keep track of what matters and make everyday tasks a little simpler.</p><div class="hero-actions"><a class="button" href="#products">Explore our apps <span aria-hidden="true">↗</span></a><a href="about/index.html">Meet Oddmatter →</a></div></div>
+<div class="brand-panel"><span class="orbit-dot" aria-hidden="true"></span><img src="./assets/oddmatter-logo-animated-pack/lockup-stacked-animated-white.svg" alt="" width="605" height="262"><span class="orbit-caption" aria-hidden="true">A little space for good ideas</span></div></div>
 <section id="products"><div class="section-head"><h2>Our apps</h2><span class="meta">Made for everyday use</span></div><div class="cards">{''.join(cards)}</div></section>
 <section class="info"><div><span class="eyebrow">Say hello</span><h2>Ideas, questions, or feedback?</h2></div><div><p>We’d love to hear from you.</p><p><a href="mailto:{e(c['email'])}">{e(c['email'])}</a></p><a href="about/index.html">About Oddmatter →</a></div></section>'''
 page('index.html', 'Home', body, './', 'home')

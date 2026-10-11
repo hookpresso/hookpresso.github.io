@@ -29,8 +29,9 @@ The site has only these four pages. The build generates `sitemap.xml` for these 
 - `content/privacy.txt`: original site-wide Privacy Policy wording.
 - `content/terms.txt`: site-wide Terms of Service text.
 - `site.json` → `terms_effective_date`: effective date for the terms only.
-- `assets/style.css`: responsive theme, print styles, keyboard focus states.
-- `assets/oddmatter-logo-pack/`: supplied brand artwork; see `assets/LOGO_USAGE.md` for layout choices.
+- `assets/style.css`: responsive space theme, print styles, keyboard focus states.
+- `assets/oddmatter-logo-pack/`: supplied static artwork and favicon.
+- `assets/oddmatter-logo-animated-pack/`: supplied animated SVGs used in the header, homepage, and footer; see `assets/LOGO_USAGE.md` for layout choices.
 - `CNAME`: GitHub Pages custom domain, copied into the deployed site.
 
 To add a product, add a unique lowercase slug and a local logo asset path to the catalog and verify that the shared policies accurately cover its practices. Never reuse TrackLogs disclosures without verifying the new product's behavior. Pages use relative URLs and work on a repository subpath or a custom domain. Product destinations accept HTTPS URLs only.

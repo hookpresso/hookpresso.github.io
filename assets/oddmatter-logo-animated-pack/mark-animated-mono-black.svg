@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="oddmatter animated mark"><title>oddmatter animated mark</title><style>
+.d{transform-box:fill-box;transform-origin:center;animation:pop .5s cubic-bezier(.2,.8,.3,1) both}
+.f{animation:float 3.2s ease-in-out 2.2s infinite}
+.o{transform-box:fill-box;transform-origin:center;animation:fly .8s cubic-bezier(.2,.8,.3,1) .85s both}
+.t{animation:in .7s ease-out 1.15s both}
+@keyframes pop{0%{transform:scale(0);opacity:0}70%{transform:scale(1.15);opacity:1}100%{transform:scale(1);opacity:1}}
+@keyframes fly{0%{transform:translate(-12px,14px) scale(.4);opacity:0}60%{transform:translate(2px,-2px) scale(1.12);opacity:1}100%{transform:translate(0,0) scale(1);opacity:1}}
+@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(0,-3px)}}
+@keyframes in{0%{opacity:0;transform:translate(var(--dx,-14px),var(--dy,0))}100%{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><g transform="translate(0 0)"><circle class="d" style="animation-delay:0.0s" cx="24" cy="30" r="10" fill="#0E0F13"/><circle class="d" style="animation-delay:0.07s" cx="60" cy="30" r="10" fill="#0E0F13"/><circle class="d" style="animation-delay:0.14s" cx="24" cy="66" r="10" fill="#0E0F13"/><circle class="d" style="animation-delay:0.21s" cx="60" cy="66" r="10" fill="#0E0F13"/><circle class="d" style="animation-delay:0.28s" cx="96" cy="66" r="10" fill="#0E0F13"/><circle class="d" style="animation-delay:0.35s" cx="24" cy="102" r="10" fill="#0E0F13"/><circle class="d" style="animation-delay:0.42s" cx="60" cy="102" r="10" fill="#0E0F13"/><circle class="d" style="animation-delay:0.49s" cx="96" cy="102" r="10" fill="#0E0F13"/><g class="f"><circle class="o" cx="108" cy="16" r="8" fill="#0E0F13"/></g></g></svg>

@@ -1,13 +1,14 @@
 # Oddmatter logo layouts
 
-The supplied pack contains 17 SVG assets. Original artwork is preserved.
+The original static pack contains 17 SVGs and the supplied animated pack contains 9 SVGs. Original artwork is preserved.
 
-- Header: `lockup-horizontal-color.svg` (862 × 162). The wide mark-and-wordmark arrangement fits navigation; display at 244px wide on desktop and 180px on mobile, preserving its aspect ratio and built-in clear space.
-- Homepage brand panel: `lockup-stacked-color.svg` (605 × 262). The centered mark over the wordmark suits a standalone panel. Omitted on narrow screens to keep policy navigation close to the top.
-- Footer: `mark-color.svg` (120 × 120), with adjacent operator text.
-- Browser tab: `favicon.svg` (64 × 64), designed for small display sizes.
-- White lockups and marks are alternatives for dark backgrounds; dark/blue/light 512px icons are available for app/avatar contexts. Standalone wordmarks and monochrome marks support compact or single-color layouts.
+- Header: `oddmatter-logo-animated-pack/lockup-horizontal-animated-white.svg` (862 × 162). The white horizontal lockup fits the midnight navigation background, at 244px wide on desktop and 210px on mobile.
+- Homepage: `oddmatter-logo-animated-pack/lockup-stacked-animated-white.svg` (605 × 262). The stacked logo sits inside decorative orbital rings. It remains visible on mobile.
+- Footer: `oddmatter-logo-animated-pack/mark-animated-white.svg` (120 × 120), with adjacent operator text.
+- Browser tab: `oddmatter-logo-pack/favicon.svg` (64 × 64).
 
-The mark consists of eight dots on a three-column grid and an offset ninth dot at the upper right. The color version uses blue #2433FF and yellow #FFD60A. The wordmark uses near-black #0E0F13 with a 55%-opacity `.space` suffix. The website uses these colors, with pale blue backgrounds and neutral text. Keep the supplied proportions, spacing, and suffix opacity; do not stretch, crop, recolor, or reconstruct the wordmark in a substitute font.
+The animated logos assemble the dotted mark, reveal the wordmark, and gently float the yellow accent dot. Their embedded CSS respects `prefers-reduced-motion`, displaying the complete artwork without animation. SVGs are loaded as images, so they do not introduce page scripts.
 
-SVG bounds were inspected in Chromium: both chosen lockups fit within their declared viewBoxes. Logo alt text in the header supplies the home link's accessible name; repeated decorative branding has empty alt text.
+The space theme uses a midnight background, soft blue and violet glows, static stars, and pale text. Decorative orbits are CSS shapes, not modifications to the logo. Preserve the artwork's proportions, spacing, and suffix opacity; do not crop or reconstruct the wordmark.
+
+The header logo supplies the home link's accessible name. Repeated homepage and footer branding and orbital shapes are decorative. Print styles use a light background for policy readability.
