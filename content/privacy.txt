@@ -68,13 +68,35 @@ We use security measures designed to guard against unauthorized access, changes,
 
 Storage and retention
 
-We retain account information until you delete your account. After deletion, copies remain in backup archives for 90 days. Subscription and transaction records are retained after account deletion. Conversation history is retained for the conversation's lifecycle, as described in the AI section above, and you can delete it.
+Local records and recovery copies
+
+Records and settings stored locally remain in the app's device or browser storage until that storage is cleared or replaced. Removing a record does not automatically remove it from older backups or recovery copies. Use the device or browser's app-data controls to clear local storage; removing a browser shortcut alone may not clear it. Where backup restoration is available, the app normally keeps the three most recent local recovery copies, with a copy being restored protected during the operation.
+
+Optional cloud backups
+
+Where offered, you can choose to back up app records and settings to your own iCloud account on iOS or Google Drive account on Android. These backups may contain record names, values, notes, history, and related settings. They are separate from research storage and ordinary analytics.
+
+Automatic backup history normally keeps backups covering the seven most recent days, four earlier weeks, and three earlier months. The five most recent manual backups are kept separately. History cleanup runs after a successfully created backup; these history limits do not guarantee deletion on a particular date. Older copies may remain if you stop making backups, disconnect, or cleanup cannot complete.
+
+Deleting local records, disabling automatic backup, disconnecting a provider, or uninstalling an app does not delete existing cloud backups. Use the app's cloud-backup deletion control while connected to remove the backups accessible through that connection. Cloud deletion leaves local records and local recovery copies unchanged. Provider recovery copies remain subject to Apple's or Google's own retention practices.
+
+Separate research data
+
+Where Universal Input research collection is enabled, its records can include raw input text, structured extraction results, and installation and session identifiers. We use this separate stream to evaluate and improve the input feature. Analytical research records expire within a 30-day window measured from the interaction's UTC date, rather than from the date of a later upload.
+
+Queued research events become ineligible for upload after 24 hours. Expired on-device copies are cleared when the app can next run; suspended apps cannot clean up immediately. Each server delivery-queue stage has a 24-hour retention limit. After analytical deletion or expiry, Google BigQuery recovery storage can retain copies for 48 hours, followed by an additional seven-day fail-safe period. Removing records from analytical access does not immediately erase these recovery copies. These periods do not describe retention for ordinary analytics, crash diagnostics, or your optional cloud backups.
+
+Other information and deletion requests
+
+Where a service offers an account, we retain account information while it is needed to provide that account and handle deletion requests. Support correspondence and any subscription or transaction records are retained only as needed for their stated purposes or applicable legal obligations. Any separately described conversation-history retention applies only to services that offer that feature.
+
+For a privacy or research-deletion request, contact ping@oddmatter.space. We may need information sufficient to locate the relevant records and verify the request. We remove identifiable research records from analytical access when a verified deletion request is processed; delivery-queue and recovery copies expire under the limits above. Content-free security and deletion-prevention records may remain as needed to prevent deleted data from being reintroduced or to meet legal obligations.
 
 Access, changes, and deletion
 
 You can update account details using the settings provided by the relevant service and manage device permissions in your device settings. Where account deletion is available, use that service's account controls. You can also send privacy and deletion requests to ping@oddmatter.space.
 
-When an account is closed, you can no longer access information through that account. We stop providing the associated account services and delete your personal information as requested, subject to the backup and transaction-record retention described above.
+When an account is closed, you can no longer access information through that account. We stop providing the associated account services and delete your personal information as requested, subject to the applicable retention periods and exceptions described above.
 
 Updates to this policy
 
