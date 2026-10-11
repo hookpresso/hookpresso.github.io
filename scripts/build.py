@@ -295,7 +295,7 @@ body = f'''<div class="legal-head"><h1>{e(terms_title)}</h1>{terms_status}</div>
 page('terms/index.html', terms_title, body, '../', 'terms')
 
 body = f'''<div class="hero about-hero"><span class="eyebrow">About Us</span><h1>A little about<br>Oddmatter.</h1>
-<p class="lead">We make independent apps for everyday life.</p><p class="product-description">Oddmatter brings our apps together in one place, starting with TrackLogs: a simple way to record things worth remembering.</p></div>
+<p class="lead">Oddmatter is an independent app studio by {e(c['operator'])}.</p><p class="product-description">Oddmatter brings our apps together in one place, starting with TrackLogs: a simple way to record things worth remembering.</p></div>
 <section class="info about-contact"><div><span class="eyebrow">Get in touch</span><h2>Say hello.</h2></div><div><p>For product support, feedback, collaboration, or privacy questions, email us.</p>
 <p><a class="contact-email" href="mailto:{e(c['email'])}">{e(c['email'])}</a></p><p>Please avoid including sensitive app records unless they are needed to explain your request.</p></div></section>'''
 page('about/index.html', 'About Us', body, '../', 'about')
