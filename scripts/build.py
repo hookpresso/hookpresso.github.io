@@ -86,14 +86,14 @@ for product in products:
     if logo_path.is_absolute() or '..' in logo_path.parts or not (ROOT / logo_path).is_file():
         raise SystemExit('Invalid product logo')
     docs[slug] = {kind: json.loads((ROOT / 'content' / slug / f'{kind}.json').read_text())
-                  for kind in ['privacy', 'terms']}
+                  for kind in ['privacy']}
 
 cards = []
 for product in products:
     slug = product['slug']
     cards.append(f'''<article class="card product-card">{logo(product, './')}<div class="product-copy"><h3>{e(product['name'])}</h3>
 <p class="product-tagline">{e(product['tagline'])}</p><p>{e(product['description'])}</p>{tags(product)}
-<div class="links"><a href="privacy/index.html#{slug}">Privacy Policy</a><a href="terms/index.html#{slug}">Terms of Service</a></div></div></article>''')
+<div class="links"><a href="privacy/index.html#{slug}">Privacy Policy</a><a href="terms/index.html">Terms of Service</a></div></div></article>''')
 body = f'''<div class="home-hero"><div class="hero"><span class="eyebrow">Independent apps by Oddmatter</span>
 <h1>Thoughtful apps.<br>For everyday life.</h1><p class="lead">Oddmatter is a home for independent apps that help you keep track of what matters and make everyday tasks a little simpler.</p></div>
 <div class="brand-panel"><img src="./assets/oddmatter-logo-pack/lockup-stacked-color.svg" alt="" width="605" height="262"></div></div>
@@ -101,7 +101,7 @@ body = f'''<div class="home-hero"><div class="hero"><span class="eyebrow">Indepe
 <section class="info"><div><span class="eyebrow">Say hello</span><h2>Ideas, questions, or feedback?</h2></div><div><p>We’d love to hear from you.</p><p><a href="mailto:{e(c['email'])}">{e(c['email'])}</a></p><a href="about/index.html">About Oddmatter →</a></div></section>'''
 page('index.html', 'Home', body, './', 'home')
 
-for kind, title in [('privacy', 'Privacy Policy'), ('terms', 'Terms of Service')]:
+for kind, title in [('privacy', 'Privacy Policy')]:
     app_links, contents = [], []
     for product in products:
         slug = product['slug']
@@ -115,6 +115,31 @@ for kind, title in [('privacy', 'Privacy Policy'), ('terms', 'Terms of Service')
     body = f'''<div class="legal-head"><span class="eyebrow">All Oddmatter apps</span><h1>{title}</h1><p class="lead">{intro}</p>{draft_notice()}</div>
 <div class="legal-grid"><aside aria-label="Apps and sections"><strong>On this page</strong><ol>{''.join(app_links)}</ol></aside><article>{''.join(contents)}{contact()}</article></div>'''
     page(f'{kind}/index.html', title, body, '../', kind)
+
+# Site-wide terms preserve the supplied wording and numbering.
+terms = (ROOT / 'content/terms.txt').read_text()
+terms_title, terms_body = terms.split('\n', 1)
+heading_pattern = re.compile(r'^(\d+\.(?:\d+)?)[ \t]+(.+?)[ \t]*$', re.MULTILINE)
+headings = list(heading_pattern.finditer(terms_body))
+terms_toc, terms_sections = [], []
+
+
+def terms_paragraphs(text):
+    return ''.join(f'<p class="terms-paragraph">{e(block.strip())}</p>'
+                   for block in re.split(r'\n[ \t]*\n', text.strip()) if block.strip())
+
+
+terms_sections.append(terms_paragraphs(terms_body[:headings[0].start()]))
+for i, heading in enumerate(headings):
+    anchor = 'section-' + heading.group(1).rstrip('.').replace('.', '-')
+    label = heading.group(0).strip()
+    end = headings[i + 1].start() if i + 1 < len(headings) else len(terms_body)
+    paragraphs = terms_paragraphs(terms_body[heading.end():end])
+    terms_toc.append(f'<li><a href="#{anchor}">{e(label)}</a></li>')
+    terms_sections.append(f'<section id="{anchor}"><h2>{e(label)}</h2>{paragraphs}</section>')
+body = f'''<div class="legal-head"><h1>{e(terms_title)}</h1>{draft_notice()}</div>
+<div class="legal-grid"><aside aria-label="On this page"><strong>On this page</strong><ul class="terms-toc">{''.join(terms_toc)}</ul></aside><article>{''.join(terms_sections)}</article></div>'''
+page('terms/index.html', terms_title, body, '../', 'terms')
 
 body = f'''<div class="hero about-hero"><span class="eyebrow">About Us</span><h1>A little about<br>Oddmatter.</h1>
 <p class="lead">We make independent apps for everyday life.</p><p class="product-description">Oddmatter brings our apps together in one place, starting with TrackLogs: a simple way to record things worth remembering.</p></div>

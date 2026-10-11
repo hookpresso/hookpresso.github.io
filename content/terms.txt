@@ -1,0 +1,159 @@
+Terms of Service
+This page explains the terms for using Oddmatter  (referred to herein as “We”, “Oddmatter”, “ Oddmatter”, “We”, “Us”, or “Our”) software, website, mobile application, and any other software provided on or in connection with the Oddmatter services including the Software, Mobile applications, websites, and any support service. (collectively called the “Service”), so please read these terms of use (this “Agreement”) carefully before using the Service. If you have any questions related to this Terms of Use, please don’t hesitate to contact us at ping@oddmatter.space. 
+
+1. Acceptance of terms
+
+Oddmatter welcomes you to the website at https://oddmatter.space and all mobile applications, software, and all related company support. The Terms of Use, including any policies, rules, and other terms that are expressly incorporated herein by reference (collectively, these “Terms”), sets forth a legally binding agreement between you and us.
+
+By accessing or using our services, you agree to be bound by this Terms of Use Agreement (“Agreement”) and to the collection and use of your information as outlined in our Privacy Policy, whether or not you are a registered user of our services. This Agreement applies to all visitors, users, members, contributors, and others who access the service.
+
+PLEASE READ THESE TERMS OF USE CAREFULLY.  IF YOU DO NOT AGREE WITH (OR CANNOT COMPLY WITH) THE AGREEMENT, THEN YOU SHOULD NOT USE THE SERVICE.  
+
+2. What do we provide?
+
+Oddmatter provides applications development and operates website content as our services. We focus on developing better apps and bringing users a better experience. You can find introductions and descriptions of related products on our website. You can also download and use our products in Google Play Store or Apple Store. Certain options are provided to you for free. Services that do not require payment are currently called “free services.” Other options require payment to access them (“paid services”). We may also provide special promotional plans, memberships, or services, including third-party products and services related to or provided through our services. We are not responsible for the products and services provided by such third parties. We reserve the right to modify, terminate or otherwise modify the subscription plans and promotional products we provide at any time in accordance with these terms.
+
+3. Company Properties and Copyright 
+
+The Application, the Software, the Website, the Services, and the information and content available on the Website and in the Application and the Services (as these terms are defined below) (collectively, the “Company Properties”) are protected by copyright and trade dress. We own and retain all interest and rights in and to our Services, We do not transfer title to any of Our Content or any portion of the Services to you. 
+
+Nothing on our Website should be construed as granting, by implication, estoppel or otherwise, any license or right to use any Intellectual Property displayed or used on our Website, without the prior written consent of Oddmatter. 
+
+4. Account login
+
+You may need to create or log in to our product or service with a Google account, Apple Store account, or any other 3rd party accounts in order to access and use certain Products or Services. To protect your account, please keep your username and password strictly confidential. You are solely responsible for maintaining the confidentiality of your username, password, and other account information, and are fully responsible for all activities performed through the use of our service and products.
+
+4.1 We Do Not Collect Personal Information
+
+Personal Information includes your name, address, email, telephone number, fax number, geographical location, the information you stored on your device, and the information to identify you or other individuals when you use applications, services, or websites.
+
+4.2 Non-Personal Information
+
+We may collect other information that cannot be used to identify a specific individual (that is, information that is not personal information), for example, statistical data generated when you use a specific service, such as user activity (including clicks, page redirects, and browsing time). This information is collected in order to improve the services we provide to you. The type and amount of information collected will depend on how you use our products and/or services. We aggregate this information to help us provide more useful information to our customers as well as to better understand which parts of our websites, products, and services are of most interest to our customers. Aggregated data is considered non-personal information for the purposes of this Privacy Policy. 
+
+5. Product Access and License Conditions.
+
+Subject to the terms and conditions of these Terms, We grant you limited, non-exclusive, non-transferable, non-sublicensable, revocable permission to make use of the Oddmatter Service, and limited, non-exclusive, non-transferable, non-sublicensable, revocable permission to make personal, non-commercial use of the Content. You promise and agree that you are using the Oddmatter Service and Content for your own personal, non-commercial use and that you will not redistribute or transfer the Oddmatter Service or the Content.
+
+In this Agreement, a child is considered a person under the age of 13 years old (or the minimum legal age in the child’s country to be able to consent themselves to the processing of their personal data if this age is higher than 13 years old). Children are not permitted to use or access the Service unless their use of the Service is directly authorized by their parent or guardian or another authorized adult (e.g., a teacher) who agrees to be bound by this Agreement.  Any use or access to the Service by a child who is not directly supervised by an adult is strictly prohibited and in violation of this Agreement. 
+
+The Service may not be available to any Users previously removed from the Service. By using the Service, you represent and warrant that you have the full right, power, and authority to enter into this Agreement and to fully perform all of your obligations hereunder. You further represent and warrant that you are under no legal disability or contractual restriction that prevents you from entering into this Agreement.
+
+Our Service and Content are not sold or transferred to you, and we and our licensors retain ownership of all copies of the Service and Content even after installation on your personal computers, mobile handsets, tablets, wearable devices, speakers, and/or other devices (“Devices”).
+
+6. Permissions and Restrictions
+
+You may access and use the Service as made available to you, as long as you comply with this Agreement and applicable law. 
+
+The following restrictions apply to your use of the Service. You are not allowed to:
+
+use our Service to create, upload, download, copy, publish or propagate any Oddmatter Content that: (i) violates any rule, law, regulation, or policy; (ii) harms national interests, endangers national security, or divulges national secrets; (iii) incites ethnic or racial discrimination or hatred; (iv) undermines the social stability; (v) contains obscenity, sexual connotation, pornography, gambling, violence, murder, or terror; (vi) insults or defames others or infringes others’ lawful rights and interests; or (vii) contains abusive or threatening information.
+access, reproduce, download, distribute, transmit, broadcast, display, sell, license, alter, modify or otherwise use any part of the Service or any Content except (a) as expressly authorized by the Service; or (b) with prior written permission from Oddmatter and, if applicable, the respective rights holders;
+circumvent, disable, fraudulently engage with, or otherwise interfere with any part of the Service (or attempt to do any of these things), including security-related features or features that (a) prevent or restrict the copying or other use of Content or (b) limit the use of the Service or Content;
+Infringing Content: Content that may infringe, misappropriate or violate the rights of any third party, such as, but not limited to, copyrights, trademarks, and rights of privacy or publicity.
+attempt to circumvent any technological measure implemented by us
+misuse any reporting, flagging, complaint, dispute, or appeals process, including by making groundless, vexatious, or frivolous submissions;
+interfering with the proper functioning of any System, including any deliberate attempt to overload a system by mail bombing, news bombing, broadcast attacks, or flooding techniques.
+use any robot, spider, scraper, or other automated means to access our website or Services for any purpose without our prior written permission;
+introduce any viruses, trojan horses, worms, logic bombs, or other material which is malicious or technologically harmful.
+build a product using similar ideas, features, functions, or graphics of the Service or copy any ideas, features, functions or graphics of the Services;
+claim that you are the representative or agent of any of the Services, including any of its functionality;
+Oddmatter has the right to remove, at its sole discretion and without notice to you, Your Content if it infringes others’ rights and interests. We have the right to suspend or terminate access to our Service to any user who uses our Service in violation of copyright law or other intellectual property law. All liabilities for damage for any claim for rights raised by the said third party shall be assumed by you, not by us, and you shall compensate for all losses and damages we incur arising therefrom, including but not limited to economic losses and business losses.
+
+You represent, warrant, and covenant that at all times: 
+
+(i) Your Content does not infringe any third party’s intellectual property, right of reputation, right of the name, right of privacy, moral rights, and other lawful rights and interests; 
+
+(ii) you own or have the necessary licenses, rights, consents, and permissions for your use of the Your Content in connection with the Oddmatter Services and our use of Your Content.
+
+7. Intellectual property infringement reporting
+
+We respect the intellectual property rights of owners and respond to notices of copyright infringement in compliance with the U.S. Digital Millennium Copyright Act  (“DMCA”), and have a policy of removing Infringing content and terminating repeat infringers in appropriate circumstances. If you believe that your Content has been copied in a way that constitutes copyright infringement, please report this at ping@oddmatter.space. 
+
+8. Payments
+
+You may need to pay for different things in order to access and use certain Products or Services. We suggest you read these terms of use before starting a payment. 
+
+Payment Processors: All financial transactions made in connection with the Service will be processed by a third party in accordance with their respective terms of use, privacy policy, and/or any applicable payment terms and conditions. We encourage you to learn about the practices of such third parties. In no event will Oddmatter be responsible for the actions or inactions of any third-party payment processor, including, but not limited to, system downtime or payment service outages.
+
+Oddmatter may manage, regulate, control, modify, or eliminate Virtual Items at any time, with or without notice. Oddmatter may update the pricing of Virtual Items at any time at its sole discretion and may add new Virtual Items for additional fees. Oddmatter shall have no liability to you or any third party in the event that Oddmatter exercises any such rights.
+
+The transfer of Virtual Items is prohibited except where expressly authorized in the Service. Other than as expressly authorized in the Service, you shall not sell, redeem or otherwise transfer Virtual Items to any person or entity, including but not limited to Company, another user, or any third party.
+
+You agree to pay all fees and applicable taxes incurred by you or anyone using a Oddmatter account registered to you. Oddmatter may revise the pricing for the goods and services offered through the Service at any time. All information that you provide in connection with a purchase or transaction or other monetary transaction interaction with the Service must be accurate, complete, and current. You agree to pay all charges incurred by users of your credit card, debit card, or other payment method used in connection with a purchase or transaction or other monetary transaction interaction with the Service at the prices in effect when such charges are incurred. You will pay any applicable taxes, if any, relating to any such purchases, transactions, or other monetary transaction interactions.
+
+We offer free trials for certain paid subscription types to allow you to try our service. We reserve the right to set eligibility requirements for free trials. At the end of your free trial period, we will charge the relevant subscription fee for the next billing cycle to your nominated payment method, unless you cancel your subscription prior.
+
+If you purchase an auto-recurring periodic subscription, your Payment Method will continue to be billed for the subscription until you cancel. After your initial subscription commitment period, and again after any subsequent subscription period, your subscription will automatically continue for an additional equivalent period, at the price you agreed to when subscribing. You can cancel the subscription at any time following the instructions of the Payment Method.
+
+You may cancel your use of Service at any time; however, there are no refunds for cancellation. In the event that Oddmatter suspends or terminates your use of Service or this Agreement, you understand and agree that you shall receive no refund or exchange for any credits, any unused time on a subscription, any license or subscription fees for any portion of the Service, any content or data associated with you, or for anything else.
+
+9. Communications
+
+You agree to receive communications from us electronically, e.g., by email, application messages, etc., and consent that such notifications satisfy any legal requirement for communication in writing. You agree that we may communicate to you for the purpose of advising you of changes or additions to the Services, about any of our products or services, or for such other purposes that are reasonable or required by applicable law.
+
+10. Feedback
+
+You may choose to or we may invite you to submit comments or ideas about the Service, including without limitation about how to improve the Service or our products (“Ideas”). By submitting any Idea, you agree that your disclosure is gratuitous, unsolicited, and without restriction and will not place Oddmatter under any fiduciary or other obligation, and that we are free to use the Idea without any additional compensation to you, and/or to disclose the Idea on a non-confidential basis or otherwise to anyone. You further acknowledge that, by acceptance of your submission, Oddmatter does not waive any rights to use similar or related ideas previously known to Oddmatter, or developed by its employees, or obtained from sources other than you.
+
+11. Third-Party Services And Links
+
+The  Oddmatter Services may contain links to independent third-party websites and services (collectively, “Third Party Sites”).  We do not endorse or assume any responsibility for any such third-party sites, information, materials, products, or services. If you access any third-party website, service, or content from Oddmatter, you understand that these Terms and Conditions and our Privacy Policy do not apply to your use of such sites. If you access any Third Party Site, you acknowledge and agree that you do so at your own risk and that it is your responsibility to read and understand the privacy, membership, payment and other policies of the Third Party Sites and to determine whether or not you will have any interaction with any of those sites.
+
+12. Application Platform Terms
+
+If you have downloaded our application from the Apple, Inc. (“Apple”) App Store or if you are using the App on an iOS device, you acknowledge that you have read, understood, and agree to the following notice regarding Apple. 
+
+These Terms are concluded between you and Oddmatter, not with Apple, and Apple is not responsible for the Services and the content thereof. Apple has no obligation whatsoever to furnish any maintenance or support services for the Service To the extent that the Services fails to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price for the Service to you; to the maximum extent permitted by law, Apple will have no other warranty obligation with respect to the Services. Apple is not responsible for addressing any claims by you or any third party relating to the Service or your possession and/or use of the Service, including: (1) product liability claims; (2) any claim that the Service fails to conform to any applicable legal or regulatory requirement; and (3) claims arising under consumer protection or similar legislation. Apple is not responsible for the investigation, defense, settlement, and discharge of any third-party claim that the Service and/or your possession and use of the application infringe that third party’s intellectual property rights. You agree to comply with any applicable third-party terms when using the Service. Apple, and Apple’s subsidiaries, are third-party beneficiaries of these Terms, and upon your acceptance of these Terms, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms against you as a third-party beneficiary of these Terms. You hereby represent and warrant that (1) you are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a “terrorist supporting” country; and (2) you are not listed on any U.S. Government list of prohibited or restricted parties.
+
+13. Disclaimer Of Warranty
+
+YOU UNDERSTAND AND AGREE THAT THE ODDMATTER SERVICE IS PROVIDED “AS IS” AND “AS AVAILABLE,” WITHOUT EXPRESS OR IMPLIED WARRANTY OR CONDITION OF ANY KIND. THE COMPANY PARTIES MAKE NO WARRANTY, REPRESENTATION, OR CONDITION THAT: (1) THE COMPANY PROPERTIES WILL MEET YOUR REQUIREMENTS; (2) YOUR USE OF THE COMPANY PROPERTIES WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE; (3) THE RESULTS THAT MAY BE OBTAINED FROM USE OF THE COMPANY PROPERTIES WILL BE ACCURATE OR RELIABLE; OR (4) ANY ERRORS IN THE COMPANY PROPERTIES WILL BE CORRECTED.
+
+ANY CONTENT DOWNLOADED FROM OR OTHERWISE ACCESSED THROUGH THE COMPANY PROPERTIES IS ACCESSED AT YOUR OWN RISK, AND YOU SHALL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR PROPERTY OR PERSON, INCLUDING, BUT NOT LIMITED TO, YOUR COMPUTER SYSTEM AND ANY DEVICE YOU USE TO ACCESS THE COMPANY PROPERTIES OR ANY OTHER LOSS THAT RESULTS FROM ACCESSING SUCH CONTENT.
+
+THE SERVICES MAY BE SUBJECT TO DELAYS, CANCELLATIONS, AND OTHER DISRUPTIONS. THE COMPANY MAKES NO WARRANTY, REPRESENTATION, OR CONDITION WITH RESPECT TO SERVICES, INCLUDING BUT NOT LIMITED TO, THE QUALITY, EFFECTIVENESS, REPUTATION, AND OTHER CHARACTERISTICS OF SERVICES.
+
+NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED FROM THE COMPANY OR THROUGH THE COMPANY PROPERTIES WILL CREATE ANY WARRANTY NOT EXPRESSLY MADE HEREIN.
+
+The Company may offer new “beta” features or tools with which its users may experiment from time to time. Such features or tools are offered solely for experimental purposes and without any warranty of any kind and may be modified or discontinued at THE Company’s sole discretion. The provisions of this section apply with full force to such features or tools.
+
+14. Limitation of Liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL ODDMATTER, ITS AFFILIATES, LICENSORS, SPONSORS, OFFICERS, DIRECTORS, EMPLOYEES, OR AGENTS, BE LIABLE TO YOU FOR ANY INDIRECT, INCIDENTAL, SPECIAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES OR FOR ANY LOST PROFITS, COST OF COVER, LOSS OF DATA, USE, GOOD-WILL, OR OTHER INTANGIBLE LOSSES WHATSOEVER ARISING OR RESULTING FROM (I) YOUR ACCESS TO OR USE OF OR INABILITY TO ACCESS OR USE THE SERVICE, (II) THE CONDUCT OR CONTENT OF OTHER MEMBERS OR THIRD PARTIES ON, THROUGH, OR FOLLOWING USE OF THE SERVICE; OR (III) UNAUTHORIZED ACCESS, USE OR ALTERATION OF YOUR CONTENT, EVEN IF ODDMATTER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN NO EVENT WILL ODDMATTER’S AGGREGATE LIABILITY TO YOU FOR ALL CLAIMS RELATING TO THE SERVICE EXCEED THE AMOUNT PAID, IF ANY, BY YOU TO US FOR THE SERVICE.
+
+UNDER NO CIRCUMSTANCES WILL THE COMPANY PARTIES BE LIABLE TO YOU FOR MORE THAN THE AMOUNT RECEIVED BY THE COMPANY AS A RESULT OF YOUR USE OF THE COMPANY PROPERTIES IN THE SUBSCRIPTION PERIOD DURING WHICH YOU FIRST ASSERT A CLAIM. IF YOU HAVE NOT PAID THE COMPANY ANY AMOUNTS IN THE SUBSCRIPTION PERIOD DURING WHICH YOU FIRST ASSERT ANY SUCH CLAIM, THE COMPANY’S SOLE AND EXCLUSIVE LIABILITY SHALL BE LIMITED TO FIFTY DOLLARS ($50).
+
+THE COMPANY PARTIES ASSUME NO RESPONSIBILITY FOR THE TIMELINESS, DELETION, MIS-DELIVERY, OR FAILURE TO STORE ANY CONTENT (INCLUDING, BUT NOT LIMITED TO, YOUR CONTENT AND USER CONTENT), USER COMMUNICATIONS, OR PERSONALIZATION SETTINGS.
+
+THE LIMITATIONS OF DAMAGES SET FORTH ABOVE ARE FUNDAMENTAL ELEMENTS OF THE BASIS OF THE BARGAIN BETWEEN THE COMPANY AND YOU.
+
+EXCLUSION OF DAMAGES: CERTAIN JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES. IF THESE LAWS APPLY TO YOU, SOME OR ALL OF THE ABOVE EXCLUSIONS OR LIMITATIONS MAY NOT APPLY TO YOU, AND YOU MIGHT HAVE ADDITIONAL RIGHTS.
+
+15. Waiver and Severability
+
+This Agreement, together with any amendments and any additional agreements you may enter into with Oddmatter in connection with the Service, will constitute the entire agreement between you and Oddmatter concerning the Service. If any provision of this Agreement is deemed invalid by a court of competent jurisdiction, the invalidity of such provision will not affect the validity of the remaining provisions of this Agreement, which will remain in full force and effect. Headings are included for convenience only and will not be considered in interpreting this Agreement. For the avoidance of doubt, as used in this Agreement, the word including means including but not limited to.
+
+16. Assignment
+
+You may not wholly or partially assign or pledge any of your rights and/or obligations under this Agreement without our prior written consent. We may transfer this Agreement and/or wholly or partially assign or pledge any of our rights and/or obligations under this Agreement to any third party provided that such third party agrees to be bound to this Agreement.
+
+17. Indemnification
+
+To the extent permitted by applicable law, you agree to defend, indemnify and hold harmless Oddmatter, its Affiliates, officers, directors, employees, and agents, from and against any and all claims, damages, obligations, losses, liabilities, costs, or debt, and expenses (including but not limited to attorney’s fees) arising from (i) your Content or your access to or use of our Services; (ii) your breach or alleged breach of these Terms; (iii) your violation of any third-party right, including without limitation, any intellectual property right, publicity, confidentiality, property or privacy right; (iv) your violation of any laws, rules, regulations, codes, statutes, ordinances or orders of any governmental authorities, including, without limitation, all regulatory, administrative and legislative authorities; or (v) any misrepresentation made by you. You will cooperate as fully required by Oddmatter in the defense of any claim. We reserve the right to assume the exclusive defense and control of any matter subject to indemnification by you, and you will not, in any event, settle any claim without the prior written consent of Oddmatter.
+
+18. Changes to Service and Termination
+
+You may terminate the Service by not using it, for any reason. However, if you use a third-party payment account such as Apple’s App Store or iTunes Store, as applicable (“App Store”) or the Google Play Store, you will need to manage in-app purchases through such account to avoid additional billing. We may terminate your use at any time without notice if it believes that you have violated this Agreement. Upon such termination, you will not be entitled to any refund for purchases.
+
+19. Changes to This Terms of Use
+
+Oddmatter reserves the right to alter these Terms at any time in its sole discretion. If the alterations constitute a material change to these Terms, we will notify you by posting the updated Terms to the Website. Your continued use of the Oddmatter Services after such notification of changes to the Terms will constitute your agreement and acceptance to such changes. If you object to any change, your sole recourse shall be to immediately terminate your account and cease using the Oddmatter Services. You agree to review the Oddmatter Website periodically for any such changes to the Terms.
+
+20. Language
+
+This agreement was originally written in English (US). To the extent any translated version of this agreement conflicts with the English version, the English version controls.
+
+21. Contacts
+
+If you have any questions related to this Terms of Use, please don’t hesitate to contact us at ping@oddmatter.space.

@@ -16,3 +16,5 @@ aside ol ol{margin-top:12px}.contact-email{font-size:clamp(20px,4vw,28px);font-w
 .about-contact{border-top:1px solid var(--line);padding-top:32px}.about-hero{padding-bottom:48px}
 @media(max-width:900px){header .wrap{flex-wrap:wrap;justify-content:flex-start;padding-top:16px;padding-bottom:18px;gap:12px}nav{width:100%;gap:24px;flex-wrap:wrap;font-size:14px}}
 @media(max-width:700px){header .wrap{gap:10px}nav{gap:10px 18px;font-size:13px}.product-card{gap:20px;flex-direction:column}.product-card .product-logo{width:80px;height:80px}.product-copy h3{font-size:26px}.policy-product{align-items:flex-start}.policy-product h2{font-size:28px}aside ol ol{display:none}}
+
+.terms-paragraph{white-space:pre-line}.terms-toc{list-style:none;padding-left:0}.terms-toc li{margin-bottom:12px}
